@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>The Geometry of Integers | New Mathematical Concepts</title>
+    <!-- Standard Google Search SEO -->
+    <title>Geometry of Integers | Dr. Hassan Baloui – Integer Foliations & Discrete Geometry</title>
+    <meta name="description" content="Geometry of Integers by Hassan Baloui. Introducing m-degree integer foliations, non-commutative foliated arithmetic, Chebyshev geodesic metrics, leaf-local prime factorization, and discrete holonomy." />
+    <meta name="keywords" content="Geometry of Integers, Hassan Baloui, integer foliation, foliated arithmetic, discrete holonomy, discrete curvature, leaf-depth primality, arithmetic holography, non-commutative number theory, Chebyshev metric on integers" />
+    <meta name="author" content="Hassan Baloui" />
+
+    <!-- Google Scholar Indexing Tags (Crucial for Academic Search) -->
+    <meta name="citation_title" content="Geometry of Integers" />
+    <meta name="citation_author" content="Baloui, Hassan" />
+    <meta name="citation_publication_date" content="2026/10/19" />
+    <meta name="citation_doi" content="10.5281/zenodo.23456718" />
+    <meta name="citation_keywords" content="Geometry of Integers; Integer Foliations; Foliated Arithmetic; Discrete Holonomy; Discrete Curvature; Prime Factorization; Arithmetic Holography; Number Theory" />
+    <meta name="citation_pdf_url" content="https://www.new-mathematical-concepts.org/geometry_of_integers_V4.pdf" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- KaTeX for crisp mathematical typography -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
@@ -115,11 +127,11 @@
             <nav class="hidden xl:flex items-center space-x-1 text-xs font-mono">
                 <a href="#prologue" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">00. Prologue</a>
                 <a href="#chapter-1" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">I. Shells &amp; Leaves</a>
+                <a href="#reel-story-widget" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">2D Peano Addition</a>
                 <a href="#chapter-2" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">II. Geodesics</a>
                 <a href="#chapter-3" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">III. Arithmetic &amp; 31</a>
                 <a href="#chapter-4" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">IV. Triadic Primes</a>
-                <a href="#chapter-5" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">V. Holography</a>
-                <a href="#epilogue" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">VI. m=1 &amp; Community</a>
+                <a href="#epilogue" class="px-2.5 py-1.5 rounded-lg text-slate-300 hover:text-brand-300 hover:bg-slate-800/60 transition">V. m=1 &amp; Community</a>
             </nav>
 
             <!-- Top Right: DOI Badge & Author Image (photo_HB.jpg) -->
@@ -145,11 +157,11 @@
         <div class="xl:hidden border-t border-slate-800/80 px-3 py-2 overflow-x-auto custom-scrollbar flex items-center gap-2 text-[11px] font-mono whitespace-nowrap bg-cosmos-950/95">
             <a href="#prologue" class="px-3 py-1 rounded-lg bg-slate-900 text-brand-300 border border-brand-500/30 active:scale-95 transition">00. Unfolder</a>
             <a href="#chapter-1" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">I. Shells &amp; Leaves</a>
+            <a href="#reel-story-widget" class="px-3 py-1 rounded-lg bg-slate-900 text-amber-300 border border-amber-500/30 active:scale-95 transition">2D Addition</a>
             <a href="#chapter-2" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">II. Geodesics</a>
             <a href="#chapter-3" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">III. Arithmetic</a>
             <a href="#chapter-4" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">IV. 861 Prism</a>
-            <a href="#chapter-5" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">V. Holography</a>
-            <a href="#epilogue" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">VI. Community</a>
+            <a href="#epilogue" class="px-3 py-1 rounded-lg bg-slate-900 text-slate-300 border border-slate-800 active:scale-95 transition">V. Community</a>
         </div>
     </header>
 
@@ -215,13 +227,20 @@
                         This portal presents the visual intuition with minimal equations. We invite you to read the full monograph for complete equations, proofs, and analytical derivations.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row gap-3 pt-1">
-                        <a href="#chapter-1" class="w-full sm:w-auto text-center px-5 py-3 sm:py-2.5 rounded-xl font-mono text-xs sm:text-sm font-bold bg-brand-500 text-cosmos-950 hover:bg-brand-400 transition shadow-lg shadow-brand-500/20">
-                            Explore the Interactive Story &darr;
+                    <!-- High-Visibility Zenodo Monograph CTA in Top Hero -->
+                    <div class="pt-1 space-y-2.5">
+                        <a href="https://doi.org/10.5281/zenodo.23456718" target="_blank" rel="noopener noreferrer" id="hero-zenodo-cta" class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono text-xs sm:text-sm font-extrabold bg-gradient-to-r from-amber-400 via-yellow-300 to-brand-400 text-cosmos-950 hover:brightness-110 transition shadow-xl shadow-amber-500/20 border border-amber-200">
+                            <span>📄 Download Full Monograph (PDF — Zenodo DOI: 10.5281/zenodo.23456718)</span>
+                            <span>&nearr;</span>
                         </a>
-                        <a href="https://doi.org/10.5281/zenodo.23456718" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center px-4 py-3 sm:py-2.5 rounded-xl font-mono text-xs sm:text-sm bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 transition">
-                            Read Full Paper (Zenodo) &nearr;
-                        </a>
+                        <div class="flex flex-col sm:flex-row gap-2.5">
+                            <a href="#chapter-1" class="w-full sm:w-auto text-center px-4 py-2.5 rounded-xl font-mono text-xs font-bold bg-brand-500/20 text-brand-300 hover:bg-brand-500/30 border border-brand-500/40 transition">
+                                Chapter I: Shells &amp; 4-Way Leaves &darr;
+                            </a>
+                            <a href="#reel-story-widget" class="w-full sm:w-auto text-center px-4 py-2.5 rounded-xl font-mono text-xs bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/40 transition">
+                                Interactive Proof: Why 1 &oplus;₂ 1 &ne; 2 &darr;
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -365,6 +384,187 @@
                     <!-- Matrix and 4-Line Algebraic Verification -->
                     <div id="inspector-output" class="space-y-2.5 text-xs font-mono">
                         <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
+             FEATURED CAMPAIGN WIDGET: WHY 1 + 1 != 2 IN 2D FOLIATED ARITHMETIC
+             (Placed after Shells & 4-Way Leaf Intersection so leaves are clear)
+             ===================================================================== -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div id="reel-story-widget" class="scroll-mt-24 math-glass rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border-2 border-brand-500/50 shadow-2xl shadow-brand-500/10 space-y-5 bg-gradient-to-b from-cosmos-900/95 via-cosmos-950 to-cosmos-900/95">
+                
+                <!-- Top Bar: Badge, Mode Switcher (Mode A vs Mode B), and Bilingual EN/FR Toggle -->
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                    <div class="space-y-1">
+                        <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-md bg-amber-500/15 border border-amber-400/40 text-amber-300 font-mono text-[10px] sm:text-xs font-bold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                            <span id="rw-badge">Interactive Campaign Explorer &bull; Why 1 + 1 &ne; 2 in 2D</span>
+                        </div>
+                        <h2 id="rw-main-title" class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-mono tracking-tight">
+                            Peano Addition Along 2D Foliated Leaves
+                        </h2>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                        <!-- Mode A / Mode B Switcher -->
+                        <div class="inline-flex bg-cosmos-950 p-1 rounded-xl border border-slate-800 font-mono text-xs">
+                            <button type="button" id="rw-mode-story-btn" onclick="setReelWidgetMode('story')" class="px-3 sm:px-4 py-2 rounded-lg font-bold transition bg-brand-500 text-cosmos-950 shadow">
+                                Mode A: Walk Through the Proof
+                            </button>
+                            <button type="button" id="rw-mode-sandbox-btn" onclick="setReelWidgetMode('sandbox')" class="px-3 sm:px-4 py-2 rounded-lg font-bold transition text-slate-300 hover:text-white">
+                                Mode B: Test Any a &oplus;₂ b
+                            </button>
+                        </div>
+
+                        <!-- Bilingual EN / FR Toggle -->
+                        <div class="inline-flex bg-cosmos-950 p-1 rounded-xl border border-slate-800 font-mono text-xs">
+                            <button type="button" id="rw-lang-en" onclick="setReelWidgetLang('EN')" class="px-2.5 py-1.5 rounded-lg font-bold transition bg-amber-400 text-cosmos-950">
+                                EN
+                            </button>
+                            <button type="button" id="rw-lang-fr" onclick="setReelWidgetLang('FR')" class="px-2.5 py-1.5 rounded-lg font-bold transition text-slate-400 hover:text-white">
+                                FR
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MODE A CONTROLS: Guided Step-Through Scrubber (Scenes 1 to 6 from Scripts) -->
+                <div id="rw-story-controls" class="space-y-3">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 font-mono text-xs">
+                        <button type="button" onclick="setReelStoryStep(1)" id="rw-step-btn-1" class="p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-amber-500/20 border-amber-400 text-white">
+                            <span class="text-[10px] text-amber-300 font-bold uppercase" id="rw-step-tag-1">Step 01 &bull; m = 1</span>
+                            <span class="font-bold text-xs mt-0.5" id="rw-step-lbl-1">1D Shadow: 1+1=2</span>
+                        </button>
+                        <button type="button" onclick="setReelStoryStep(2)" id="rw-step-btn-2" class="p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700">
+                            <span class="text-[10px] text-sky-400 font-bold uppercase" id="rw-step-tag-2">Step 02 &bull; m = 2</span>
+                            <span class="font-bold text-xs mt-0.5" id="rw-step-lbl-2">Unfold 2D Leaves</span>
+                        </button>
+                        <button type="button" onclick="setReelStoryStep(3)" id="rw-step-btn-3" class="p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700">
+                            <span class="text-[10px] text-emerald-400 font-bold uppercase" id="rw-step-tag-3">Step 03 &bull; Triad</span>
+                            <span class="font-bold text-xs mt-0.5" id="rw-step-lbl-3">1 &oplus;₂ 1 = {4, 5, 6}</span>
+                        </button>
+                        <button type="button" onclick="setReelStoryStep(4)" id="rw-step-btn-4" class="p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700">
+                            <span class="text-[10px] text-pink-400 font-bold uppercase" id="rw-step-tag-4">Step 04 &bull; Order</span>
+                            <span class="font-bold text-xs mt-0.5" id="rw-step-lbl-4">2 &oplus;₂ 3 &ne; 3 &oplus;₂ 2</span>
+                        </button>
+                        <button type="button" onclick="setReelStoryStep(5)" id="rw-step-btn-5" class="p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700">
+                            <span class="text-[10px] text-yellow-300 font-bold uppercase" id="rw-step-tag-5">Reel #4 &bull; Cor. 3.2</span>
+                            <span class="font-bold text-xs mt-0.5" id="rw-step-lbl-5">The 31 Collision</span>
+                        </button>
+                        <button type="button" onclick="setReelStoryStep(6)" id="rw-step-btn-6" class="p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700">
+                            <span class="text-[10px] text-indigo-400 font-bold uppercase" id="rw-step-tag-6">Reel #3/#5 &bull; m=3</span>
+                            <span class="font-bold text-xs mt-0.5" id="rw-step-lbl-6">Cubic &amp; 11&times;19=209</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- MODE B CONTROLS: Free Interactive Calculator (Test Any a (+)2 b) -->
+                <div id="rw-sandbox-controls" class="hidden bg-cosmos-950/90 p-4 rounded-2xl border border-brand-500/40 space-y-3">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+                        <div class="flex flex-wrap items-center gap-3 font-mono text-xs">
+                            <div>
+                                <label class="block text-[10px] text-slate-400 uppercase mb-1" id="rw-lbl-anchor" for="rw-input-a">Start Anchor a (0–24) or Click Node</label>
+                                <input id="rw-input-a" type="number" min="0" max="24" value="1" oninput="runReelSandbox(true)" class="w-24 bg-cosmos-900 border border-amber-400/60 rounded-xl px-3 py-2 text-[16px] sm:text-sm font-bold text-amber-300 text-center">
+                            </div>
+                            <div class="text-lg font-bold text-brand-400 pt-4">&oplus;₂</div>
+                            <div>
+                                <label class="block text-[10px] text-slate-400 uppercase mb-1" id="rw-lbl-steps" for="rw-input-b">Step Count b (1–4)</label>
+                                <input id="rw-input-b" type="number" min="1" max="4" value="1" oninput="runReelSandbox(true)" class="w-24 bg-cosmos-900 border border-sky-400/60 rounded-xl px-3 py-2 text-[16px] sm:text-sm font-bold text-sky-300 text-center">
+                            </div>
+                            <div class="pt-4 flex items-center gap-2">
+                                <label class="inline-flex items-center gap-2 cursor-pointer bg-slate-900 px-3 py-2 rounded-xl border border-slate-700 text-xs text-slate-200">
+                                    <input type="checkbox" id="rw-compare-comm" onchange="runReelSandbox(true)" class="accent-pink-500 w-4 h-4">
+                                    <span id="rw-lbl-compare">Overlay Reverse (b &oplus;₂ a)</span>
+                                </label>
+                                <button type="button" onclick="runReelSandbox(true)" class="px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-400 text-cosmos-950 font-bold transition shadow">
+                                    &#9654; <span id="rw-btn-replay">Animate</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Quick Sandbox Presets -->
+                        <div class="flex flex-wrap items-center gap-1.5 font-mono text-[11px]">
+                            <span class="text-slate-400 mr-1" id="rw-preset-title">Presets:</span>
+                            <button type="button" onclick="setReelSandboxPreset(1, 1, false)" class="px-2.5 py-1.5 rounded-lg bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold hover:bg-amber-500/30">1 &oplus;₂ 1 = {4,5,6}</button>
+                            <button type="button" onclick="setReelSandboxPreset(2, 3, true)" class="px-2.5 py-1.5 rounded-lg bg-sky-500/20 text-sky-300 border border-sky-500/40 font-bold hover:bg-sky-500/30">2 &oplus;₂ 3 vs 3 &oplus;₂ 2</button>
+                            <button type="button" onclick="setReelSandboxPreset(3, 4, true)" class="px-2.5 py-1.5 rounded-lg bg-pink-500/20 text-pink-300 border border-pink-500/40 font-bold hover:bg-pink-500/30">&starf; 3 &oplus;₂ 4 &cap; 4 &oplus;₂ 3 = {31}</button>
+                            <button type="button" onclick="setReelSandboxPreset(0, 3, false)" class="px-2.5 py-1.5 rounded-lg bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700">0 &oplus;₂ 3 = {9,12,15}</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Interactive Stage: Left Canvas + Right Live Equation & Narrative Banner -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                    <!-- Left 7 Cols: Interactive HTML5 Canvas matching the Reel Choreography -->
+                    <div class="lg:col-span-7 bg-[#050811] border-2 border-slate-800 rounded-2xl overflow-hidden p-2 flex flex-col justify-between relative shadow-inner">
+                        <canvas id="reel-explorer-canvas" width="760" height="490" class="responsive-canvas cursor-pointer"></canvas>
+                        <div class="flex flex-wrap items-center justify-between gap-2 px-3 py-2 bg-[#0B1120] border-t border-slate-800/90 rounded-b-xl text-[11px] font-mono">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="inline-flex items-center gap-1 text-[#83C167] font-bold"><span class="w-2.5 h-0.5 bg-[#83C167] inline-block"></span> Left $L_g (\lambda=0)$</span>
+                                <span class="inline-flex items-center gap-1 text-[#FFFF00] font-bold"><span class="w-2.5 h-0.5 bg-[#FFFF00] inline-block"></span> Vertical $V_g (\lambda=1/2)$</span>
+                                <span class="inline-flex items-center gap-1 text-[#58C4DD] font-bold"><span class="w-2.5 h-0.5 bg-[#58C4DD] inline-block"></span> Right $R_g (\lambda=1)$</span>
+                            </div>
+                            <span id="rw-canvas-hint" class="text-slate-400">Tip: Click any node on the 2D pyramid to set anchor a!</span>
+                        </div>
+                    </div>
+
+                    <!-- Right 5 Cols: Top Equation Banner + Narrative Walkthrough + Prev/Next Buttons -->
+                    <div class="lg:col-span-5 flex flex-col justify-between space-y-4 bg-[#0B1120] p-4 sm:p-5 rounded-2xl border-2 border-slate-800">
+                        <div class="space-y-4">
+                            <!-- Dynamic Equation Banner (Matching draw_top_equation_banner in Python scripts) -->
+                            <div id="rw-eq-banner" class="p-4 rounded-2xl bg-[#050811] border-2 border-amber-400/80 text-center space-y-2 shadow-lg">
+                                <!-- Populated by JS -->
+                            </div>
+
+                            <!-- Narrative Card -->
+                            <div id="rw-narrative-box" class="space-y-2.5 text-xs sm:text-sm text-slate-200 leading-relaxed">
+                                <!-- Populated by JS -->
+                            </div>
+
+                            <!-- Live Leaf Breakdown Table -->
+                            <div id="rw-leaf-breakdown" class="space-y-2 font-mono text-xs">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Bottom Navigation inside Right Panel (Prev / Replay / Next Step) -->
+                        <div class="pt-3 border-t border-slate-800 flex items-center justify-between gap-2 font-mono text-xs">
+                            <button type="button" id="rw-prev-btn" onclick="stepReelStory(-1)" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700 transition">
+                                &larr; <span id="rw-prev-txt">Prev</span>
+                            </button>
+                            <button type="button" onclick="replayReelCurrent()" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-brand-300 border border-brand-500/30 transition">
+                                &#8635; <span id="rw-replay-txt">Replay Animation</span>
+                            </button>
+                            <button type="button" id="rw-next-btn" onclick="stepReelStory(1)" class="px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-400 text-cosmos-950 font-bold transition shadow">
+                                <span id="rw-next-txt">Next Step</span> &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Widget Locked Footer: High-Conversion Zenodo CTA + Compact Bilingual Video Series Drawer -->
+                <div class="pt-4 border-t border-slate-800/90 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+                    <!-- Locked Zenodo Monograph Button -->
+                    <a href="https://doi.org/10.5281/zenodo.23456718" target="_blank" rel="noopener noreferrer" id="widget-zenodo-cta" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono text-xs sm:text-sm font-extrabold bg-gradient-to-r from-brand-400 via-teal-300 to-amber-300 text-cosmos-950 hover:brightness-110 transition shadow-lg shadow-brand-500/20">
+                        <span>📄 Download Full Monograph (PDF — Zenodo DOI: 10.5281/zenodo.23456718)</span>
+                        <span>&nearr;</span>
+                    </a>
+
+                    <!-- Compact Video Drawer / Links for Bilingual YouTube Shorts & Reels -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 bg-cosmos-950 p-2 rounded-xl border border-slate-800 font-mono text-xs">
+                        <span class="px-2.5 py-1 text-slate-400 font-bold flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+                            <span id="rw-video-drawer-lbl">Watch Narrated Reels:</span>
+                        </span>
+                        <a href="[PASTE EN YOUTUBE LINK]" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 border border-rose-500/30 font-bold text-center transition">
+                            &#9654; EN YouTube Short &nearr;
+                        </a>
+                        <a href="[PASTE FR YOUTUBE LINK]" target="_blank" rel="noopener noreferrer" class="px-3 py-2 rounded-lg bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-300 border border-indigo-500/30 font-bold text-center transition">
+                            &#9654; FR YouTube Short &nearr;
+                        </a>
                     </div>
                 </div>
             </div>
@@ -584,72 +784,6 @@
 
                 <div id="prism-output" class="space-y-4 font-mono text-xs">
                     <!-- Populated dynamically -->
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================================
-             CHAPTER V: CONICAL EMBEDDING, CURVATURE & PRIME HOLOGRAPHY (FIG. 6)
-             ===================================================================== -->
-        <section id="chapter-5" class="scroll-mt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-800 pb-4 gap-3">
-                <div>
-                    <span class="text-xs font-mono font-bold uppercase tracking-widest text-indigo-400">Chapter V &bull; Holonomy &amp; Arithmetic Holography</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Conical Prime Holography &amp; Discrete Curvature</h2>
-                </div>
-                <p class="text-xs sm:text-sm text-slate-400 max-w-xl">
-                    Wrapping $\mathbb{N}_2$ onto a cone closes each shell $S_n$ into a circular ring whose prime packet $\mathcal{P}(S_n)$ is sieved exclusively by the $\pi(n)$ primes in the interior interval $[1, n]$.
-                </p>
-            </div>
-
-            <!-- Interactive Widget 05: Interactive Figure 6 (Conical Prime Holography Diagram) -->
-            <div class="math-glass rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-indigo-500/30 space-y-6">
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
-                    <div>
-                        <span class="text-[10px] font-mono uppercase tracking-widest text-indigo-400 font-bold">Interactive Widget 05 &bull; Paper Figure 6</span>
-                        <h3 class="text-sm sm:text-lg font-bold text-white font-mono">The Arithmetic Holographic Conjecture on the Conical Embedding of $\mathbb{N}_2$</h3>
-                    </div>
-                    <div class="px-3 py-1.5 rounded-xl bg-indigo-950/90 border border-indigo-500/40 text-indigo-200 font-mono text-xs self-start sm:self-auto">
-                        $\pi\big((n+1)^2\big) - \pi(n^2) \sim \pi(n)$
-                    </div>
-                </div>
-
-                <!-- Slider Control -->
-                <div class="bg-cosmos-950 p-4 rounded-2xl border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div class="space-y-1">
-                        <div class="text-xs font-mono text-slate-300">
-                            Slide Shell Index $k = n$ to inspect the <strong>Interior Sieve Interval $[1, n]$</strong> (blue) vs. <strong>Shell Ring $S_n = [n^2, (n+1)^2-1]$</strong> (red):
-                        </div>
-                        <div id="holo-n-label" class="text-brand-300 font-mono font-bold text-xs sm:text-sm">
-                            n = 11 &bull; Interior [1, 11] (k &le; 3) sieves Shell Ring S₁₁ = [121, 143]
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3 w-full sm:w-64 flex-shrink-0">
-                        <input id="holo-n-slider" type="range" min="3" max="45" value="11" oninput="updateHolographyExplorer()" class="w-full h-2 accent-brand-400 cursor-pointer">
-                    </div>
-                </div>
-
-                <!-- Canvas reproducing Figure 6 from the paper interactively (scales smoothly on smartphones & laptops) -->
-                <div class="w-full bg-cosmos-950 border border-slate-800 rounded-2xl overflow-hidden p-1 sm:p-2">
-                    <canvas id="holography-cone-canvas" width="820" height="330" class="responsive-canvas"></canvas>
-                </div>
-
-                <!-- Summary Stats + Prime Lists -->
-                <div id="holography-stats" class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
-                    <!-- Populated dynamically -->
-                </div>
-
-                <!-- Brief Note on Discrete Holonomy & Double-Cone -->
-                <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs">
-                    <div class="space-y-1 text-slate-300">
-                        <span class="font-mono font-bold text-brand-300 uppercase">Discrete Holonomy &amp; Asymptotic Curvature (Section 4.2):</span>
-                        <p class="leading-relaxed">
-                            Multiplying an integer $n$ by its leaf successor shifts it by $n$ shells ($\widehat{T}_\lambda(n) = \nabla_\lambda(n,n)$). Sequential self-shifts along distinct directions $\lambda_1 \neq \lambda_2$ fail to commute ($[\widehat{T}_{\lambda_1}, \widehat{T}_{\lambda_2}] \neq 0$), generating positive discrete curvature whose quadratically normalized value converges to $2|\lambda_1 - \lambda_2|$ at infinity.
-                        </p>
-                    </div>
-                    <a href="https://doi.org/10.5281/zenodo.23456718" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-brand-500/15 border border-brand-500/40 text-brand-300 hover:bg-brand-500/25 font-mono text-xs text-center whitespace-nowrap flex-shrink-0">
-                        See Proofs in Section 4 &nearr;
-                    </a>
                 </div>
             </div>
         </section>
@@ -1723,244 +1857,6 @@
         }
 
         // =====================================================================
-        // WIDGET 05: INTERACTIVE FIGURE 6 (CONICAL PRIME HOLOGRAPHY DIAGRAM)
-        // =====================================================================
-        function updateHolographyExplorer() {
-            const n = parseInt(document.getElementById('holo-n-slider').value, 10) || 11;
-            const kBulk = Math.floor(Math.sqrt(n));
-
-            const bulkPrimes = [];
-            for (let p = 2; p <= n; p++) {
-                if (isPrime(p)) bulkPrimes.push(p);
-            }
-
-            const shellStart = n * n;
-            const shellEnd = (n + 1) * (n + 1) - 1;
-            const shellPrimes = [];
-            for (let x = shellStart; x <= shellEnd; x++) {
-                if (isPrime(x)) shellPrimes.push(x);
-            }
-
-            document.getElementById('holo-n-label').innerText =
-                `n = ${n} • Interior Interval [1, ${n}] (k ≤ ${kBulk}) sieves Shell Ring S_${n} = [${shellStart}, ${shellEnd}]`;
-
-            const stats = document.getElementById('holography-stats');
-            stats.innerHTML = `
-                <div class="p-4 rounded-2xl bg-sky-950/30 border border-sky-500/40 space-y-1.5">
-                    <div class="flex justify-between items-center">
-                        <span class="text-sky-300 font-bold">Interior Interval $[1, ${n}]$</span>
-                        <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-200 font-bold">$\\pi(${n}) = ${bulkPrimes.length}$</span>
-                    </div>
-                    <div class="text-[11px] text-slate-300 leading-relaxed max-h-20 overflow-y-auto custom-scrollbar">
-                        Sieve Primes: ${bulkPrimes.join(', ')}
-                    </div>
-                </div>
-
-                <div class="p-4 rounded-2xl bg-rose-950/30 border border-rose-500/40 space-y-1.5">
-                    <div class="flex justify-between items-center">
-                        <span class="text-rose-300 font-bold">Shell Ring $S_{${n}} = [${shellStart}, ${shellEnd}]$</span>
-                        <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-200 font-bold">$|\\mathcal{P}(S_{${n}})| = ${shellPrimes.length}$</span>
-                    </div>
-                    <div class="text-[11px] text-slate-300 leading-relaxed max-h-20 overflow-y-auto custom-scrollbar">
-                        Prime Packet: ${shellPrimes.join(', ')}
-                    </div>
-                </div>
-
-                <div class="p-4 rounded-2xl bg-indigo-950/30 border border-indigo-500/40 space-y-1.5 flex flex-col justify-between">
-                    <div class="flex justify-between items-center">
-                        <span class="text-indigo-300 font-bold">Holographic Balance</span>
-                        <span class="text-brand-300 font-bold">$n / \\ln n \\approx ${(n / Math.log(n)).toFixed(1)}$</span>
-                    </div>
-                    <div class="text-[11px] text-slate-300">
-                        Exact Local Prime-Depth Count on $S_{${n}}$: $|\\mathcal{D}_{\\lambda,2} \\cap S_{${n}}| = \\pi(${n}) + \\pi(${n - 1}) = ${bulkPrimes.length + (isPrime(n) ? bulkPrimes.length - 1 : bulkPrimes.length)}$.
-                    </div>
-                </div>
-            `;
-            renderKaTeXElement(stats);
-            drawFigure6ConicalHolography(n, kBulk, bulkPrimes, shellPrimes);
-        }
-
-        function drawFigure6ConicalHolography(n, kBulk, bulkPrimes, shellPrimes) {
-            const canvas = document.getElementById('holography-cone-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Geometry matching Figure 6 of the paper
-            const apexX = 55;
-            const apexY = 170;
-            const coneLen = 490;
-            const maxR = 112;
-            const maxRx = 42;
-
-            const kMidRatio = 0.86;
-            const kBulkRatio = 0.40;
-
-            const xMax = apexX + coneLen;
-            const xRing = apexX + coneLen * kMidRatio;
-            const ryRing = maxR * kMidRatio;
-            const rxRing = maxRx * kMidRatio;
-
-            const xBulk = apexX + coneLen * kBulkRatio;
-            const ryBulk = maxR * kBulkRatio;
-            const rxBulk = maxRx * kBulkRatio;
-
-            // 1. Outer Cone Back Dashed Arc
-            ctx.strokeStyle = 'rgba(148, 163, 184, 0.3)';
-            ctx.lineWidth = 1.5;
-            ctx.setLineDash([5, 5]);
-            ctx.beginPath();
-            ctx.ellipse(xMax, apexY, maxRx, maxR, 0, Math.PI / 2, (3 * Math.PI) / 2);
-            ctx.stroke();
-            ctx.setLineDash([]);
-
-            // Outer Cone Slant Lines & Front Arc
-            ctx.strokeStyle = 'rgba(148, 163, 184, 0.45)';
-            ctx.beginPath();
-            ctx.moveTo(apexX, apexY);
-            ctx.lineTo(xMax, apexY - maxR);
-            ctx.moveTo(apexX, apexY);
-            ctx.lineTo(xMax, apexY + maxR);
-            ctx.stroke();
-
-            ctx.beginPath();
-            ctx.ellipse(xMax, apexY, maxRx, maxR, 0, -Math.PI / 2, Math.PI / 2);
-            ctx.stroke();
-
-            // Central Dash-Dot Axis (Shell Index k)
-            ctx.strokeStyle = 'rgba(148, 163, 184, 0.45)';
-            ctx.setLineDash([8, 4, 2, 4]);
-            ctx.beginPath();
-            ctx.moveTo(apexX - 25, apexY);
-            ctx.lineTo(xMax + 48, apexY);
-            ctx.stroke();
-            ctx.setLineDash([]);
-            ctx.fillStyle = '#cbd5e1';
-            ctx.font = '11px monospace';
-            ctx.textAlign = 'left';
-            ctx.fillText('Shell Index k', xMax + 52, apexY + 4);
-
-            // 2. Blue Shaded Interior Cone [1, n] (k <= floor(sqrt(n)))
-            ctx.fillStyle = 'rgba(56, 189, 248, 0.16)';
-            ctx.beginPath();
-            ctx.moveTo(apexX, apexY);
-            ctx.lineTo(xBulk, apexY - ryBulk);
-            ctx.ellipse(xBulk, apexY, rxBulk, ryBulk, 0, -Math.PI / 2, Math.PI / 2);
-            ctx.closePath();
-            ctx.fill();
-
-            // Blue Interior Cone Boundary Ring (Front Solid, Back Dashed)
-            ctx.strokeStyle = '#38bdf8';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.ellipse(xBulk, apexY, rxBulk, ryBulk, 0, -Math.PI / 2, Math.PI / 2);
-            ctx.stroke();
-
-            ctx.setLineDash([4, 4]);
-            ctx.beginPath();
-            ctx.ellipse(xBulk, apexY, rxBulk, ryBulk, 0, Math.PI / 2, (3 * Math.PI) / 2);
-            ctx.stroke();
-            ctx.setLineDash([]);
-
-            // Plot Blue Sieve Prime Dots inside the Interior Cone
-            bulkPrimes.forEach((p) => {
-                const c = extractCoords(p, 2);
-                const frac = Math.min(0.95, Math.max(0.18, p / (n + 1)));
-                const px = apexX + frac * (xBulk - apexX);
-                const localRy = frac * ryBulk;
-                const localRx = frac * rxBulk;
-                const angle = c.k > 0 ? (Math.PI * c.gv) / c.k : 0;
-                const dotX = px + localRx * 0.45 * Math.cos(angle);
-                const dotY = apexY + localRy * 0.82 * Math.sin(angle);
-
-                ctx.fillStyle = '#38bdf8';
-                ctx.beginPath();
-                ctx.arc(dotX, dotY, 3.2, 0, Math.PI * 2);
-                ctx.fill();
-            });
-
-            // Callout Label & Arrow for Interior Interval [1, n]
-            ctx.fillStyle = '#38bdf8';
-            ctx.font = 'bold 11px monospace';
-            ctx.textAlign = 'center';
-            ctx.fillText(`Interior Interval [1, ${n}] (k ≤ ⌊√${n}⌋ = ${kBulk})`, xBulk - 20, apexY - ryBulk - 38);
-            ctx.font = '11px monospace';
-            ctx.fillStyle = '#bae6fd';
-            ctx.fillText(`Sieve Primes = π(${n}) = ${bulkPrimes.length}`, xBulk - 20, apexY - ryBulk - 22);
-
-            ctx.strokeStyle = '#38bdf8';
-            ctx.lineWidth = 1.5;
-            ctx.beginPath();
-            ctx.moveTo(xBulk - 20, apexY - ryBulk - 16);
-            ctx.lineTo(apexX + (xBulk - apexX) * 0.68, apexY - ryBulk * 0.45);
-            ctx.stroke();
-
-            // 3. Red Shell Ring S_n at k = n (Back Dashed, Front Solid)
-            ctx.strokeStyle = '#f43f5e';
-            ctx.lineWidth = 2.5;
-            ctx.setLineDash([5, 5]);
-            ctx.beginPath();
-            ctx.ellipse(xRing, apexY, rxRing, ryRing, 0, Math.PI / 2, (3 * Math.PI) / 2);
-            ctx.stroke();
-            ctx.setLineDash([]);
-
-            ctx.beginPath();
-            ctx.ellipse(xRing, apexY, rxRing, ryRing, 0, -Math.PI / 2, Math.PI / 2);
-            ctx.stroke();
-
-            // Plot Red Prime Dots on Shell Ring S_n at their conical angles
-            shellPrimes.forEach((p) => {
-                const gv = p - (n * n + n);
-                const theta = (Math.PI * gv) / n;
-                const px = xRing + rxRing * Math.cos(theta);
-                const py = apexY + ryRing * Math.sin(theta);
-
-                ctx.fillStyle = '#fb7185';
-                ctx.beginPath();
-                ctx.arc(px, py, 3.8, 0, Math.PI * 2);
-                ctx.fill();
-                ctx.strokeStyle = '#040711';
-                ctx.lineWidth = 1;
-                ctx.stroke();
-            });
-
-            // Callout Label & Arrow for Shell Ring S_n
-            ctx.fillStyle = '#fb7185';
-            ctx.font = 'bold 11px monospace';
-            ctx.textAlign = 'center';
-            ctx.fillText(`Shell Ring S_${n} (k = ${n}, integers ${n * n} to ${(n + 1) * (n + 1) - 1})`, xRing - 55, apexY + ryRing + 30);
-            ctx.font = '11px monospace';
-            ctx.fillStyle = '#fecdd3';
-            ctx.fillText(`Prime Packet |P(S_${n})| = π((${n}+1)²) - π(${n}²) = ${shellPrimes.length}`, xRing - 55, apexY + ryRing + 46);
-
-            ctx.strokeStyle = '#fb7185';
-            ctx.lineWidth = 1.5;
-            ctx.beginPath();
-            ctx.moveTo(xRing - 35, apexY + ryRing + 16);
-            ctx.lineTo(xRing - 4, apexY + ryRing - 6);
-            ctx.stroke();
-
-            // 4. Right-Hand Boxed Formula Callout (matching Figure 6)
-            const boxX = xMax + 58;
-            const boxY = apexY - 58;
-            const boxW = 195;
-            const boxH = 44;
-            ctx.fillStyle = '#0f172a';
-            ctx.strokeStyle = '#2dd4bf';
-            ctx.lineWidth = 1.5;
-            ctx.fillRect(boxX, boxY, boxW, boxH);
-            ctx.strokeRect(boxX, boxY, boxW, boxH);
-
-            ctx.fillStyle = '#f8fafc';
-            ctx.font = 'bold 12px monospace';
-            ctx.textAlign = 'center';
-            ctx.fillText('π((n+1)²) - π(n²) ~ π(n)', boxX + boxW / 2, boxY + 18);
-            ctx.fillStyle = '#5eead4';
-            ctx.font = '11px monospace';
-            ctx.fillText(`|P(S_${n})| = ${shellPrimes.length}  vs  π(${n}) = ${bulkPrimes.length}`, boxX + boxW / 2, boxY + 34);
-        }
-
-        // =====================================================================
         // READER COMMENTS & SUBSCRIPTION HANDLERS
         // =====================================================================
         const defaultComments = [
@@ -2036,16 +1932,916 @@
             document.getElementById('sub-email').value = '';
         }
 
+        // =====================================================================
+        // CAMPAIGN WIDGET ENGINE: STORY + SANDBOX (REELS #1 - #5 CHOREOGRAPHY)
+        // =====================================================================
+        const REEL_SHELL_COLORS = ["#FFFF00", "#83C167", "#58C4DD", "#FC6255", "#9A72AC", "#F59E0B"];
+        const REEL_LEFT_LEAVES = {};
+        const REEL_RIGHT_LEAVES = {};
+        const REEL_VERT_LEAVES = {};
+
+        for (let g = 0; g <= 10; g++) {
+            const k0 = Math.floor((g + 1) / 2);
+            REEL_LEFT_LEAVES[g] = [];
+            REEL_RIGHT_LEAVES[g] = [];
+            for (let k = k0; k <= 5; k++) {
+                REEL_LEFT_LEAVES[g].push(k * k + g);
+                REEL_RIGHT_LEAVES[g].push((k + 1) * (k + 1) - 1 - g);
+            }
+        }
+        for (let gv = -5; gv <= 5; gv++) {
+            REEL_VERT_LEAVES[gv] = [];
+            for (let k = Math.abs(gv); k <= 5; k++) {
+                REEL_VERT_LEAVES[gv].push(k * k + k + gv);
+            }
+        }
+
+        let reelWidgetState = {
+            mode: 'story',       // 'story' | 'sandbox'
+            lang: 'EN',          // 'EN' | 'FR'
+            step: 1,             // 1..6 in story mode
+            subMode6: 'cubic',   // 'cubic' | 'mult209'
+            animProgress: 0,
+            pulsePhase: 0,
+            sandboxA: 1,
+            sandboxB: 1,
+            sandboxCompare: false
+        };
+
+        function smoothstepJS(t) {
+            const c = Math.max(0, Math.min(1, t));
+            return c * c * (3 - 2 * c);
+        }
+
+        function getResidentLeaves35(n) {
+            const k = Math.floor(Math.sqrt(n));
+            const r = n - k * k;
+            const gl = r;
+            const gv = r - k;
+            const gr = 2 * k - r;
+            return {
+                L: REEL_LEFT_LEAVES[gl] || [],
+                V: REEL_VERT_LEAVES[gv] || [],
+                R: REEL_RIGHT_LEAVES[gr] || [],
+                gl, gv, gr, k, r
+            };
+        }
+
+        function setReelWidgetLang(lang) {
+            reelWidgetState.lang = lang;
+            const btnEn = document.getElementById('rw-lang-en');
+            const btnFr = document.getElementById('rw-lang-fr');
+            if (btnEn && btnFr) {
+                btnEn.className = lang === 'EN'
+                    ? 'px-2.5 py-1.5 rounded-lg font-bold transition bg-amber-400 text-cosmos-950'
+                    : 'px-2.5 py-1.5 rounded-lg font-bold transition text-slate-400 hover:text-white';
+                btnFr.className = lang === 'FR'
+                    ? 'px-2.5 py-1.5 rounded-lg font-bold transition bg-amber-400 text-cosmos-950'
+                    : 'px-2.5 py-1.5 rounded-lg font-bold transition text-slate-400 hover:text-white';
+            }
+
+            const isFR = lang === 'FR';
+            const ctaText = isFR
+                ? '📄 Télécharger la Monographie Complète (PDF — Zenodo DOI)'
+                : '📄 Download Full Monograph (PDF — Zenodo DOI: 10.5281/zenodo.23456718)';
+
+            const heroCta = document.getElementById('hero-zenodo-cta');
+            const widgetCta = document.getElementById('widget-zenodo-cta');
+            if (heroCta) heroCta.innerHTML = `<span>${ctaText}</span><span>&nearr;</span>`;
+            if (widgetCta) widgetCta.innerHTML = `<span>${ctaText}</span><span>&nearr;</span>`;
+
+            document.getElementById('rw-badge').innerHTML = isFR
+                ? 'Explorateur Interactif &bull; Pourquoi 1 + 1 &ne; 2 en 2D'
+                : 'Interactive Campaign Explorer &bull; Why 1 + 1 &ne; 2 in 2D';
+            document.getElementById('rw-main-title').innerText = isFR
+                ? 'Addition de Peano sur les Feuilles Feuilletées 2D'
+                : 'Peano Addition Along 2D Foliated Leaves';
+
+            document.getElementById('rw-mode-story-btn').innerText = isFR
+                ? 'Mode A : Parcourir la Preuve'
+                : 'Mode A: Walk Through the Proof';
+            document.getElementById('rw-mode-sandbox-btn').innerText = isFR
+                ? 'Mode B : Tester a ⊕₂ b'
+                : 'Mode B: Test Any a ⊕₂ b';
+
+            const stepLabels = isFR
+                ? ['Ombre 1D : 1+1=2', 'Déplier les Feuilles 2D', '1 ⊕₂ 1 = {4, 5, 6}', '2 ⊕₂ 3 ≠ 3 ⊕₂ 2', 'La Collision 31', 'Cubique & 11×19=209']
+                : ['1D Shadow: 1+1=2', 'Unfold 2D Leaves', '1 ⊕₂ 1 = {4, 5, 6}', '2 ⊕₂ 3 ≠ 3 ⊕₂ 2', 'The 31 Collision', 'Cubic & 11×19=209'];
+            for (let i = 1; i <= 6; i++) {
+                const el = document.getElementById(`rw-step-lbl-${i}`);
+                if (el) el.innerText = stepLabels[i - 1];
+            }
+
+            document.getElementById('rw-lbl-anchor').innerText = isFR
+                ? 'Entier de Départ a (0–24) ou Cliquer'
+                : 'Start Anchor a (0–24) or Click Node';
+            document.getElementById('rw-lbl-steps').innerText = isFR
+                ? 'Nombre de Pas b (1–4)'
+                : 'Step Count b (1–4)';
+            document.getElementById('rw-lbl-compare').innerText = isFR
+                ? 'Superposer b ⊕₂ a'
+                : 'Overlay Reverse (b ⊕₂ a)';
+            document.getElementById('rw-btn-replay').innerText = isFR ? 'Animer' : 'Animate';
+            document.getElementById('rw-canvas-hint').innerText = isFR
+                ? 'Astuce : Cliquez sur un entier de la pyramide 2D pour choisir a !'
+                : 'Tip: Click any node on the 2D pyramid to set anchor a!';
+            document.getElementById('rw-prev-txt').innerText = isFR ? 'Préc.' : 'Prev';
+            document.getElementById('rw-replay-txt').innerText = isFR ? 'Rejouer' : 'Replay Animation';
+            document.getElementById('rw-next-txt').innerText = isFR ? 'Étape Suiv.' : 'Next Step';
+            document.getElementById('rw-video-drawer-lbl').innerText = isFR ? 'Vidéos Narrées :' : 'Watch Narrated Reels:';
+
+            updateReelWidgetPanel();
+        }
+
+        function setReelWidgetMode(mode) {
+            reelWidgetState.mode = mode;
+            reelWidgetState.animProgress = 0;
+
+            const storyBtn = document.getElementById('rw-mode-story-btn');
+            const sandboxBtn = document.getElementById('rw-mode-sandbox-btn');
+            const storyControls = document.getElementById('rw-story-controls');
+            const sandboxControls = document.getElementById('rw-sandbox-controls');
+
+            if (mode === 'story') {
+                storyBtn.className = 'px-3 sm:px-4 py-2 rounded-lg font-bold transition bg-brand-500 text-cosmos-950 shadow';
+                sandboxBtn.className = 'px-3 sm:px-4 py-2 rounded-lg font-bold transition text-slate-300 hover:text-white';
+                storyControls.classList.remove('hidden');
+                sandboxControls.classList.add('hidden');
+            } else {
+                sandboxBtn.className = 'px-3 sm:px-4 py-2 rounded-lg font-bold transition bg-brand-500 text-cosmos-950 shadow';
+                storyBtn.className = 'px-3 sm:px-4 py-2 rounded-lg font-bold transition text-slate-300 hover:text-white';
+                storyControls.classList.add('hidden');
+                sandboxControls.classList.remove('hidden');
+            }
+            updateReelWidgetPanel();
+        }
+
+        function setReelStoryStep(step) {
+            reelWidgetState.mode = 'story';
+            reelWidgetState.step = Math.max(1, Math.min(6, step));
+            reelWidgetState.animProgress = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const btn = document.getElementById(`rw-step-btn-${i}`);
+                if (btn) {
+                    btn.className = (i === reelWidgetState.step)
+                        ? 'p-2.5 rounded-xl border-2 text-left transition flex flex-col justify-between bg-amber-500/20 border-amber-400 text-white shadow-lg'
+                        : 'p-2.5 rounded-xl border text-left transition flex flex-col justify-between bg-slate-900/90 border-slate-800 text-slate-300 hover:border-slate-700';
+                }
+            }
+            updateReelWidgetPanel();
+        }
+
+        function stepReelStory(delta) {
+            if (reelWidgetState.mode !== 'story') {
+                setReelWidgetMode('story');
+            }
+            let next = reelWidgetState.step + delta;
+            if (next < 1) next = 6;
+            if (next > 6) next = 1;
+            setReelStoryStep(next);
+        }
+
+        function replayReelCurrent() {
+            reelWidgetState.animProgress = 0;
+        }
+
+        function setReelSandboxPreset(a, b, compare) {
+            document.getElementById('rw-input-a').value = a;
+            document.getElementById('rw-input-b').value = b;
+            document.getElementById('rw-compare-comm').checked = compare;
+            runReelSandbox(true);
+        }
+
+        function runReelSandbox(resetAnim) {
+            let a = parseInt(document.getElementById('rw-input-a').value, 10);
+            let b = parseInt(document.getElementById('rw-input-b').value, 10);
+            if (isNaN(a)) a = 1;
+            if (isNaN(b)) b = 1;
+            a = Math.max(0, Math.min(24, a));
+            b = Math.max(1, Math.min(5 - Math.floor(Math.sqrt(a)), b));
+            document.getElementById('rw-input-b').value = b;
+
+            reelWidgetState.sandboxA = a;
+            reelWidgetState.sandboxB = b;
+            reelWidgetState.sandboxCompare = document.getElementById('rw-compare-comm').checked;
+            if (resetAnim) reelWidgetState.animProgress = 0;
+            updateReelWidgetPanel();
+        }
+
+        function setSubModeStep6(sub) {
+            reelWidgetState.subMode6 = sub;
+            reelWidgetState.animProgress = 0;
+            updateReelWidgetPanel();
+        }
+
+        function updateReelWidgetPanel() {
+            const isFR = reelWidgetState.lang === 'FR';
+            const banner = document.getElementById('rw-eq-banner');
+            const narrative = document.getElementById('rw-narrative-box');
+            const breakdown = document.getElementById('rw-leaf-breakdown');
+            if (!banner || !narrative || !breakdown) return;
+
+            if (reelWidgetState.mode === 'story') {
+                const st = reelWidgetState.step;
+                if (st === 1) {
+                    banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-[#F59E0B] text-center space-y-1.5 shadow-lg';
+                    banner.innerHTML = `
+                        <div class="text-xs font-mono text-slate-400 font-bold">${isFR ? 'Droite Numérique Classique à 1 Dimension ($m = 1$)' : 'Classical 1D Number Line ($m = 1$)'}</div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-[#FFFF00] font-mono">$$1 + 1 \\;=\\; 2$$</div>
+                    `;
+                    narrative.innerHTML = isFR
+                        ? `<p>En 1910, <strong>Whitehead et Russell</strong> ont écrit 362 pages dans les <em>Principia Mathematica</em> pour prouver que $1 + 1 = 2$. Sous l'axiomatique de Peano, l'addition consiste à partir de $1$ et à compter $+1$ pas vers l'avant.</p><p class="text-amber-300 font-mono text-xs">Sur une ligne plate unique ($m=1$), il n'y a qu'une seule direction : on atterrit forcément sur $2$.</p>`
+                        : `<p>In 1910, <strong>Whitehead &amp; Russell</strong> famously took 362 pages in <em>Principia Mathematica</em> to prove that $1 + 1 = 2$. Under Peano arithmetic, addition means starting at $1$ and counting $+1$ step forward.</p><p class="text-amber-300 font-mono text-xs">On a single flat 1D line ($m=1$), only one trajectory exists: you inevitably land on $2$.</p>`;
+                    breakdown.innerHTML = `
+                        <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-300">
+                            <span class="text-rose-400 font-bold">${isFR ? 'Règle de Peano 1D :' : '1D Peano Rule:'}</span> $\\nabla_{\\lambda,1}(1, 1) = 1 + 1 = \\mathbf{2}$
+                        </div>
+                    `;
+                } else if (st === 2) {
+                    banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-[#38BDF8] text-center space-y-1.5 shadow-lg';
+                    banner.innerHTML = `
+                        <div class="text-xs font-mono text-sky-400 font-bold">${isFR ? 'Intervalles Quadratiques $S_k = \\{k^2, \\dots, k^2+2k\\}$' : 'Quadratic Intervals $S_k = \\{k^2, \\dots, k^2+2k\\}$'}</div>
+                        <div class="text-sm sm:text-base font-bold text-white font-mono">$$\\nabla_\\lambda(a, b) = a + 2b\\lfloor\\sqrt{a}\\rfloor + b^2 + 2\\lambda b$$</div>
+                    `;
+                    narrative.innerHTML = isFR
+                        ? `<p>Découpons la droite en intervalles entre carrés consécutifs $S_k = \\{k^2, \\dots, (k+1)^2-1\\}$ et alignons leurs médianes $V_0(k) = k^2+k$ verticalement.</p><p class="text-sky-300 font-mono text-xs">Chaque entier acquiert <strong>2 degrés de liberté</strong> et appartient simultanément à <strong>3 feuilles de Peano 1D</strong> : Gauche $L_g$ (verte), Verticale $V_g$ (jaune) et Droite $R_g$ (cyan).</p>`
+                        : `<p>Partition the number line into intervals between consecutive squares $S_k = \\{k^2, \\dots, (k+1)^2-1\\}$ and align their centers $V_0(k) = k^2+k$ vertically.</p><p class="text-sky-300 font-mono text-xs">Every integer acquires <strong>2 degrees of freedom</strong> and sits on <strong>3 canonical 1D Peano leaves</strong>: Left $L_g$ (green), Vertical $V_g$ (yellow), and Right $R_g$ (cyan).</p>`;
+                    breakdown.innerHTML = `
+                        <div class="grid grid-cols-3 gap-2 text-center">
+                            <div class="p-2 rounded-lg bg-slate-900 border border-[#83C167]/40 text-[#83C167] font-bold">Left $L_g$<br><span class="text-[10px] text-slate-400">$\\lambda = 0$</span></div>
+                            <div class="p-2 rounded-lg bg-slate-900 border border-[#FFFF00]/40 text-[#FFFF00] font-bold">Vertical $V_g$<br><span class="text-[10px] text-slate-400">$\\lambda = 1/2$</span></div>
+                            <div class="p-2 rounded-lg bg-slate-900 border border-[#58C4DD]/40 text-[#58C4DD] font-bold">Right $R_g$<br><span class="text-[10px] text-slate-400">$\\lambda = 1$</span></div>
+                        </div>
+                    `;
+                } else if (st === 3) {
+                    banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-[#FFFF00] text-center space-y-1.5 shadow-lg';
+                    banner.innerHTML = `
+                        <div class="text-xs font-mono text-amber-300 font-bold">${isFR ? 'Compter +1 Pas sur les 3 Feuilles de 1' : 'Count +1 Step Along All 3 Leaves of 1'}</div>
+                        <div class="text-xl sm:text-2xl font-extrabold text-white font-mono">$$1 \\oplus_2 1 \\;=\\; \\{\\, 4, \\; 5, \\; 6 \\,\\} \\;\\neq\\; 2$$</div>
+                    `;
+                    narrative.innerHTML = isFR
+                        ? `<p>Appliquons exactement la même règle de Peano en 2D : partons de $a = 1 \\in S_1$ et avançons de $b = 1$ pas le long de ses trois feuilles résidentes ($L_0, V_{-1}, R_2$).</p><p class="text-amber-300 font-mono text-xs">Parce que $2$ et $3$ sont des voisins latéraux dans le même intervalle $S_1$, avancer d'un pas vers l'intervalle $S_2$ donne le triplet $\{4, 5, 6\}$ !</p>`
+                        : `<p>Apply the exact same Peano step-counting rule in 2D: start at $a = 1 \\in S_1$ and count $b = 1$ step forward along its three resident Peano leaves ($L_0, V_{-1}, R_2$).</p><p class="text-amber-300 font-mono text-xs">Because $2$ and $3$ are lateral neighbors inside the same interval $S_1$, stepping forward into $S_2$ lands on the triad $\{4, 5, 6\}$!</p>`;
+                    breakdown.innerHTML = `
+                        <div class="grid grid-cols-3 gap-2 text-center">
+                            <div class="p-2 rounded-xl bg-slate-900 border border-[#83C167]/50"><div class="text-[10px] text-[#83C167]">$L_0 (\\lambda=0)$</div><div class="text-sm font-bold text-white">$\\nabla_0(1,1) = \\mathbf{4}$</div></div>
+                            <div class="p-2 rounded-xl bg-slate-900 border border-[#FFFF00]/50"><div class="text-[10px] text-[#FFFF00]">$V_{-1} (\\lambda=1/2)$</div><div class="text-sm font-bold text-white">$\\nabla_{1/2}(1,1) = \\mathbf{5}$</div></div>
+                            <div class="p-2 rounded-xl bg-slate-900 border border-[#58C4DD]/50"><div class="text-[10px] text-[#58C4DD]">$R_2 (\\lambda=1)$</div><div class="text-sm font-bold text-white">$\\nabla_1(1,1) = \\mathbf{6}$</div></div>
+                        </div>
+                    `;
+                } else if (st === 4) {
+                    banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-[#EC4899] text-center space-y-1 shadow-lg';
+                    banner.innerHTML = `
+                        <div class="text-sm sm:text-base font-bold text-[#38BDF8] font-mono">$$2 \\oplus_2 3 = \\{\\mathbf{17}, \\mathbf{20}, \\mathbf{23}\\} \\subset S_4$$</div>
+                        <div class="text-sm sm:text-base font-bold text-[#EC4899] font-mono">$$3 \\oplus_2 2 = \\{\\mathbf{11}, \\mathbf{13}, \\mathbf{15}\\} \\subset S_3$$</div>
+                    `;
+                    narrative.innerHTML = isFR
+                        ? `<p>Sur la droite 1D, $2 + 3 = 3 + 2 = 5$. Mais en 2D, partir de $2 \\in S_1$ et avancer de $3$ intervalles atteint <strong>$S_4$</strong> ($\{17, 20, 23\}$), tandis que partir de $3 \\in S_1$ et avancer de $2$ intervalles s'arrête en <strong>$S_3$</strong> ($\{11, 13, 15\}$) !</p>`
+                        : `<p>On a 1D line, $2 + 3 = 3 + 2 = 5$. In 2D, starting at $2 \\in S_1$ and counting $3$ steps forward lands in <strong>Interval $S_4$</strong> ($\{17, 20, 23\}$), whereas starting at $3 \\in S_1$ and counting $2$ steps lands in <strong>Interval $S_3$</strong> ($\{11, 13, 15\}$)!</p>`;
+                    breakdown.innerHTML = `
+                        <div class="p-2.5 rounded-xl bg-cosmos-950 border border-yellow-400/50 text-center text-yellow-300 font-bold">
+                            $$2 \\oplus_2 3 \\;\\neq\\; 3 \\oplus_2 2 \\qquad ((2 \\oplus_2 3) \\cap (3 \\oplus_2 2) = \\emptyset)$$
+                        </div>
+                    `;
+                } else if (st === 5) {
+                    banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-[#10B981] text-center space-y-1 shadow-lg';
+                    banner.innerHTML = `
+                        <div class="text-xs font-mono text-emerald-400 font-bold">${isFR ? 'Corollaire 3.2 • L\'Unique Collision Commutative' : 'Corollary 3.2 • The Unique Commutative Collision'}</div>
+                        <div class="text-sm sm:text-base font-bold text-white font-mono">$$(3 \\oplus_2 4) \\cap (4 \\oplus_2 3) = \\{27,\\mathbf{31},35\\} \\cap \\{25,28,\\mathbf{31}\\} = \\{\\mathbf{31}\\}$$</div>
+                    `;
+                    narrative.innerHTML = isFR
+                        ? `<p>Deux sommes commutatives $a \\oplus_m b$ et $b \\oplus_m a$ ($2 \\le a < b$) peuvent-elles se croiser ? Pour atteindre le même intervalle $k_a + b = k_b + a$, il faut être une paire frontière $(k^m-1, k^m)$.</p><p class="text-amber-300 font-mono text-xs">Dans toute la hiérarchie $m \\ge 2$, la feuille verticale $V_{-1}$ de $3$ et la feuille droite $R_4$ de $4$ se croisent en un <strong>unique nombre premier : $31 \\in S_5$</strong> !</p>`
+                        : `<p>Can $a \\oplus_m b$ and $b \\oplus_m a$ ($2 \\le a < b$) ever touch? Reaching the same target interval $k_a + b = k_b + a$ requires a boundary pair $(a,b) = (k^m-1, k^m)$.</p><p class="text-amber-300 font-mono text-xs">Across the entire infinite hierarchy $m \\ge 2$, the Vertical leaf $V_{-1}$ from $3$ and the Right leaf $R_4$ from $4$ collide at a <strong>single unique prime: $31 \\in S_5$</strong>!</p>`;
+                    breakdown.innerHTML = `
+                        <div class="p-2.5 rounded-xl bg-emerald-950/30 border border-emerald-500/40 text-center text-emerald-300 font-bold">
+                            $$K(K+1)+(k-1) = K(K+2)-2k \\iff k=2 \\implies \\mathbf{31} \\in S_5$$
+                        </div>
+                    `;
+                } else if (st === 6) {
+                    const isCubic = reelWidgetState.subMode6 === 'cubic';
+                    banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-indigo-400 text-center space-y-1.5 shadow-lg';
+                    banner.innerHTML = isCubic
+                        ? `<div class="text-xs font-mono text-indigo-300 font-bold">${isFR ? 'Reel #3 • Feuilletage Cubique ($m=3$)' : 'Reel #3 • Cubic Foliation ($m=3$)'}</div>
+                           <div class="text-lg sm:text-xl font-bold text-white font-mono">$$1 \\oplus_3 1 = \\{\\mathbf{8}, \\mathbf{14}, \\mathbf{20}\\} \\subset S_{2,3}$$</div>`
+                        : `<div class="text-xs font-mono text-amber-300 font-bold">${isFR ? 'Reel #5 • Théorème 4.2 (Translation Universelle)' : 'Reel #5 • Theorem 4.2 (Universal Translation)'}</div>
+                           <div class="text-lg sm:text-xl font-bold text-[#FFFF00] font-mono">$$11 \\times 19 = \\nabla_{1/2}(11, 11) = \\mathbf{209} \\in S_{14}$$</div>`;
+                    narrative.innerHTML = `
+                        <div class="flex gap-2 mb-2 font-mono text-xs">
+                            <button type="button" onclick="setSubModeStep6('cubic')" class="flex-1 py-1.5 rounded-lg font-bold border ${isCubic ? 'bg-indigo-500 text-white border-indigo-300' : 'bg-slate-900 text-slate-400 border-slate-700'}">Reel #3: Cubic (m=3)</button>
+                            <button type="button" onclick="setSubModeStep6('mult209')" class="flex-1 py-1.5 rounded-lg font-bold border ${!isCubic ? 'bg-amber-400 text-cosmos-950 border-amber-200' : 'bg-slate-900 text-slate-400 border-slate-700'}">Reel #5: 11 &times; 19 = 209</button>
+                        </div>
+                        ${isCubic
+                            ? (isFR
+                                ? `<p>Pour $m=3$, les feuilles gauche $L_{g,3}$ et droite $R_{g,3}$ deviennent des courbes cubiques ! Compter $+1$ pas depuis $1$ donne $1 \\oplus_3 1 = \\{8, 14, 20\\}$, et $2 \\oplus_3 3 = \\{65, 92, 119\\} \\neq 3 \\oplus_3 2 = \\{29, 44, 59\\}$.</p>`
+                                : `<p>For $m=3$, the Left $L_{g,3}$ and Right $R_{g,3}$ Peano leaves flare outward as cubic curves! Counting $+1$ step from $1$ yields $1 \\oplus_3 1 = \\{8, 14, 20\\}$, while $2 \\oplus_3 3 = \\{65, 92, 119\\} \\neq 3 \\oplus_3 2 = \\{29, 44, 59\\}$.</p>`)
+                            : (isFR
+                                ? `<p>Sur la feuille verticale $V_{-1}$, $11 \\in S_3$ est juste au-dessus de $19 \\in S_4$. Multiplier $11 \\times 19 = 209$ fait glisser $11$ de $+11$ coquilles tout droit sur $V_{-1}$ jusqu'à $S_{14}$ ($11\\times 18=198$ sur $L_2$, $11\\times 20=220$ sur $R_4$).</p>`
+                                : `<p>On vertical leaf $V_{-1}$, $11 \\in S_3$ sits directly above $19 \\in S_4$. Multiplying $11 \\times 19 = 209$ slides $11$ straight down $V_{-1}$ by $+11$ shells to $S_{14}$ ($11\\times 18=198$ on $L_2$, $11\\times 20=220$ on $R_4$).</p>`)}
+                    `;
+                    breakdown.innerHTML = isCubic
+                        ? `<div class="p-2 rounded-xl bg-slate-900 border border-indigo-500/40 text-center text-indigo-300 font-bold">$$\\forall m \\ge 3: (a \\oplus_m b) \\cap (b \\oplus_m a) = \\emptyset$$</div>`
+                        : `<div class="p-2 rounded-xl bg-slate-900 border border-amber-500/40 text-center text-amber-300 font-bold">$$(g, d)_\\lambda \\cdot (g, d+1)_\\lambda = (g, d+n)_\\lambda = \\nabla_\\lambda(n, n)$$</div>`;
+                }
+            } else {
+                // MODE B: SANDBOX CALCULATOR
+                const a = reelWidgetState.sandboxA;
+                const b = reelWidgetState.sandboxB;
+                const comp = reelWidgetState.sandboxCompare;
+                const ka = Math.floor(Math.sqrt(a));
+                const targetK = ka + b;
+                const tL = nablaM(a, b, 0, 2);
+                const tV = nablaM(a, b, 0.5, 2);
+                const tR = nablaM(a, b, 1, 2);
+                const leavesA = getResidentLeaves35(a);
+
+                let revHTML = '';
+                if (comp) {
+                    const kb = Math.floor(Math.sqrt(b));
+                    const rL = nablaM(b, a, 0, 2);
+                    const rV = nablaM(b, a, 0.5, 2);
+                    const rR = nablaM(b, a, 1, 2);
+                    revHTML = `<div class="text-sm sm:text-base font-bold text-[#EC4899] font-mono">$$${b} \\oplus_2 ${a} = \\{\\mathbf{${rL}}, \\mathbf{${rV}}, \\mathbf{${rR}}\\} \\subset S_{${kb + a}}$$</div>`;
+                }
+
+                banner.className = 'p-4 rounded-2xl bg-[#050811] border-2 border-[#38BDF8] text-center space-y-1.5 shadow-lg';
+                banner.innerHTML = `
+                    <div class="text-xs font-mono text-sky-400 font-bold">${isFR ? `Calculateur Direct dans N₂ (Intervalle Cible S_${targetK})` : `Live 2D Foliated Addition in N₂ (Target Interval S_${targetK})`}</div>
+                    <div class="text-lg sm:text-xl font-extrabold text-[#FFFF00] font-mono">$$${a} \\oplus_2 ${b} = \\{\\mathbf{${tL}}, \\mathbf{${tV}}, \\mathbf{${tR}}\\} \\subset S_{${targetK}}$$</div>
+                    ${revHTML}
+                `;
+
+                narrative.innerHTML = isFR
+                    ? `<p>Départ de l'ancre <strong>$a = ${a} \\in S_{${ka}}$</strong> et avancement de <strong>$b = ${b}$ pas</strong> le long de ses 3 feuilles de Peano résidentes ($L_{${leavesA.gl}}, V_{${leavesA.gv}}, R_{${leavesA.gr}}$) jusqu'à l'intervalle $S_{${targetK}}$.</p>`
+                    : `<p>Starting at anchor <strong>$a = ${a} \\in S_{${ka}}$</strong> and counting <strong>$b = ${b}$ steps</strong> forward along its 3 resident Peano leaves ($L_{${leavesA.gl}}, V_{${leavesA.gv}}, R_{${leavesA.gr}}$) into interval $S_{${targetK}}$.</p>`;
+
+                breakdown.innerHTML = `
+                    <div class="grid grid-cols-3 gap-2 text-center">
+                        <div class="p-2.5 rounded-xl bg-slate-900 border border-[#83C167]/50">
+                            <div class="text-[10px] text-[#83C167]">$L_{${leavesA.gl}} (\\lambda=0)$</div>
+                            <div class="text-sm font-bold text-white mt-0.5">$\\nabla_0(${a},${b}) = \\mathbf{${tL}}$</div>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-slate-900 border border-[#FFFF00]/50">
+                            <div class="text-[10px] text-[#FFFF00]">$V_{${leavesA.gv}} (\\lambda=1/2)$</div>
+                            <div class="text-sm font-bold text-white mt-0.5">$\\nabla_{1/2}(${a},${b}) = \\mathbf{${tV}}$</div>
+                        </div>
+                        <div class="p-2.5 rounded-xl bg-slate-900 border border-[#58C4DD]/50">
+                            <div class="text-[10px] text-[#58C4DD]">$R_{${leavesA.gr}} (\\lambda=1)$</div>
+                            <div class="text-sm font-bold text-white mt-0.5">$\\nabla_1(${a},${b}) = \\mathbf{${tR}}$</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            renderKaTeXElement(banner);
+            renderKaTeXElement(narrative);
+            renderKaTeXElement(breakdown);
+        }
+
+        // Canvas coordinate helpers for the Reel Explorer Canvas (760 x 490)
+        function getReel2DPos(n, maxK = 5, W = 760, H = 490) {
+            const k = Math.floor(Math.sqrt(n));
+            const gv = (n - k * k) - k;
+            const dx = maxK >= 5 ? 58 : 68;
+            const dy = maxK >= 5 ? 72 : 84;
+            const yTop = maxK >= 5 ? 64 : 74;
+            return { x: W / 2 + gv * dx, y: yTop + k * dy, k, gv };
+        }
+
+        function getReel1DPos(n, maxN = 10, W = 760, H = 490) {
+            const pad = 68;
+            const x = pad + (n / maxN) * (W - 2 * pad);
+            return { x, y: H * 0.52 };
+        }
+
+        function drawReelArrow(ctx, x1, y1, x2, y2, progress, color, lw = 3.8, dashed = false) {
+            if (progress <= 0.02) return;
+            const cx = x1 + (x2 - x1) * progress;
+            const cy = y1 + (y2 - y1) * progress;
+            ctx.save();
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = lw;
+            if (dashed) ctx.setLineDash([6, 5]);
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(cx, cy);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            const ang = Math.atan2(cy - y1, cx - x1);
+            const headLen = 12;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(cx - headLen * Math.cos(ang - Math.PI / 6), cy - headLen * Math.sin(ang - Math.PI / 6));
+            ctx.lineTo(cx - headLen * Math.cos(ang + Math.PI / 6), cy - headLen * Math.sin(ang + Math.PI / 6));
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function drawReelCurvedArc(ctx, p1, p2, progress, color, arcHeight = -75, lw = 4) {
+            if (progress <= 0.02) return;
+            const ctrlX = 0.5 * (p1.x + p2.x);
+            const ctrlY = 0.5 * (p1.y + p2.y) + arcHeight;
+            ctx.save();
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = lw;
+            ctx.beginPath();
+            const steps = 32;
+            let lastX = p1.x, lastY = p1.y, prevX = p1.x, prevY = p1.y;
+            for (let i = 0; i <= steps; i++) {
+                const t = (i / steps) * progress;
+                const x = (1 - t) * (1 - t) * p1.x + 2 * (1 - t) * t * ctrlX + t * t * p2.x;
+                const y = (1 - t) * (1 - t) * p1.y + 2 * (1 - t) * t * ctrlY + t * t * p2.y;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+                prevX = lastX; prevY = lastY;
+                lastX = x; lastY = y;
+            }
+            ctx.stroke();
+            if (progress > 0.1) {
+                const ang = Math.atan2(lastY - prevY, lastX - prevX);
+                const headLen = 12;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(lastX - headLen * Math.cos(ang - Math.PI / 6), lastY - headLen * Math.sin(ang - Math.PI / 6));
+                ctx.lineTo(lastX - headLen * Math.cos(ang + Math.PI / 6), lastY - headLen * Math.sin(ang + Math.PI / 6));
+                ctx.closePath();
+                ctx.fill();
+            }
+            ctx.restore();
+        }
+
+        function drawResidentPeanoLeavesCanvas(ctx, anchorN, maxK, alpha, colL = "#83C167", colV = "#FFFF00", colR = "#58C4DD", showLabels = true) {
+            const leaves = getResidentLeaves35(anchorN);
+            const maxNode = (maxK + 1) * (maxK + 1) - 1;
+            const configs = [
+                { nodes: leaves.L.filter(m => m <= maxNode), col: colL, lbl: `L_${leaves.gl}` },
+                { nodes: leaves.V.filter(m => m <= maxNode), col: colV, lbl: `V_${leaves.gv}` },
+                { nodes: leaves.R.filter(m => m <= maxNode), col: colR, lbl: `R_${leaves.gr}` }
+            ];
+            ctx.save();
+            ctx.globalAlpha = alpha;
+            configs.forEach(cfg => {
+                if (cfg.nodes.length > 1) {
+                    ctx.strokeStyle = cfg.col;
+                    ctx.lineWidth = 2.4;
+                    ctx.setLineDash([6, 4]);
+                    ctx.beginPath();
+                    cfg.nodes.forEach((m, idx) => {
+                        const p = getReel2DPos(m, maxK);
+                        if (idx === 0) ctx.moveTo(p.x, p.y);
+                        else ctx.lineTo(p.x, p.y);
+                    });
+                    ctx.stroke();
+                    ctx.setLineDash([]);
+                    if (showLabels) {
+                        const lastP = getReel2DPos(cfg.nodes[cfg.nodes.length - 1], maxK);
+                        ctx.fillStyle = cfg.col;
+                        ctx.font = 'bold 11px monospace';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(cfg.lbl, lastP.x, lastP.y + 26);
+                    }
+                }
+            });
+            ctx.restore();
+        }
+
+        function draw2DPyramidGrid(ctx, ptsFn, maxN, maxK, alphaShells, highlightSet, nodeColorMap, pulseR) {
+            if (alphaShells > 0.03) {
+                ctx.save();
+                // Horizontal intervals S_0..S_{maxK}
+                for (let k = 0; k <= maxK; k++) {
+                    const pL = ptsFn(k * k);
+                    const pR = ptsFn(k * k + 2 * k);
+                    ctx.globalAlpha = alphaShells * 0.85;
+                    ctx.strokeStyle = REEL_SHELL_COLORS[k];
+                    ctx.lineWidth = 2.2;
+                    ctx.beginPath();
+                    ctx.moveTo(pL.x, pL.y);
+                    ctx.lineTo(pR.x, pR.y);
+                    ctx.stroke();
+
+                    ctx.fillStyle = REEL_SHELL_COLORS[k];
+                    ctx.font = 'bold 12px monospace';
+                    ctx.textAlign = 'right';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(`S_${k}`, pL.x - 24, pL.y);
+                }
+
+                // Faint background 3-directional Peano leaf grid
+                ctx.globalAlpha = alphaShells * 0.35;
+                ctx.lineWidth = 1.1;
+                ctx.setLineDash([2, 3]);
+                for (let g = 0; g <= 2 * maxK; g++) {
+                    const lNodes = (REEL_LEFT_LEAVES[g] || []).filter(m => m <= maxN);
+                    if (lNodes.length > 1) {
+                        ctx.strokeStyle = '#83C167';
+                        ctx.beginPath();
+                        lNodes.forEach((m, i) => { const p = ptsFn(m); i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y); });
+                        ctx.stroke();
+                    }
+                    const rNodes = (REEL_RIGHT_LEAVES[g] || []).filter(m => m <= maxN);
+                    if (rNodes.length > 1) {
+                        ctx.strokeStyle = '#58C4DD';
+                        ctx.beginPath();
+                        rNodes.forEach((m, i) => { const p = ptsFn(m); i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y); });
+                        ctx.stroke();
+                    }
+                }
+                for (let gv = -maxK; gv <= maxK; gv++) {
+                    const vNodes = (REEL_VERT_LEAVES[gv] || []).filter(m => m <= maxN);
+                    if (vNodes.length > 1) {
+                        ctx.strokeStyle = gv === 0 ? '#FFFF00' : '#94A3B8';
+                        ctx.beginPath();
+                        vNodes.forEach((m, i) => { const p = ptsFn(m); i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y); });
+                        ctx.stroke();
+                    }
+                }
+                ctx.setLineDash([]);
+                ctx.restore();
+            }
+
+            // Draw nodes
+            const baseR = maxK >= 5 ? 14.5 : 16.5;
+            for (let n = 0; n <= maxN; n++) {
+                const p = ptsFn(n);
+                const k = Math.floor(Math.sqrt(n));
+                const isHl = highlightSet.has(n);
+                const is31 = (n === 31 && isHl);
+                const r = is31 ? baseR * 1.45 : (isHl ? baseR * 1.25 : baseR);
+                const fc = nodeColorMap[n] || (isHl ? '#B91C1C' : '#0F172A');
+                const ec = isHl ? '#FFFFFF' : (alphaShells > 0.2 ? REEL_SHELL_COLORS[k] : '#94A3B8');
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = fc;
+                ctx.fill();
+                ctx.lineWidth = is31 ? 3 : (isHl ? 2.4 : 1.5);
+                ctx.strokeStyle = ec;
+                ctx.stroke();
+
+                if (isHl && pulseR > 0) {
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, r + pulseR, 0, Math.PI * 2);
+                    ctx.strokeStyle = is31 ? '#FFFF00' : fc;
+                    ctx.lineWidth = 1.8;
+                    ctx.setLineDash([4, 3]);
+                    ctx.stroke();
+                    ctx.restore();
+                }
+
+                const darkText = ['#FFFF00', '#83C167', '#58C4DD', '#38BDF8', '#F59E0B'].includes(fc);
+                ctx.fillStyle = darkText ? '#050811' : '#FFFFFF';
+                ctx.font = isHl ? 'bold 12px monospace' : 'bold 10.5px monospace';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(n.toString(), p.x, p.y);
+            }
+        }
+
+        function animateReelExplorer() {
+            const canvas = document.getElementById('reel-explorer-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const W = canvas.width, H = canvas.height;
+            ctx.clearRect(0, 0, W, H);
+
+            reelWidgetState.animProgress = Math.min(1, reelWidgetState.animProgress + 0.018);
+            reelWidgetState.pulsePhase += 0.08;
+            const p = reelWidgetState.animProgress;
+            const pulseR = 3 + 2.2 * Math.sin(reelWidgetState.pulsePhase);
+            const isFR = reelWidgetState.lang === 'FR';
+
+            if (reelWidgetState.mode === 'story') {
+                const st = reelWidgetState.step;
+
+                // STEP 1: 1D SHADOW (1 + 1 = 2 on 0..10 line)
+                if (st === 1) {
+                    const tArc = smoothstepJS((p - 0.1) / 0.65);
+                    const pStart = getReel1DPos(0, 10, W, H);
+                    const pEnd = getReel1DPos(10, 10, W, H);
+
+                    ctx.strokeStyle = '#EF4444';
+                    ctx.lineWidth = 3.5;
+                    ctx.beginPath();
+                    ctx.moveTo(pStart.x - 20, pStart.y);
+                    ctx.lineTo(pEnd.x + 20, pEnd.y);
+                    ctx.stroke();
+
+                    const hl = new Set(tArc > 0.65 ? [1, 2] : [1]);
+                    const ncols = { 1: '#F59E0B', 2: '#FFFF00' };
+                    draw2DPyramidGrid(ctx, (n) => getReel1DPos(n, 10, W, H), 10, 3, 0, hl, ncols, pulseR);
+
+                    const pt1 = getReel1DPos(1, 10, W, H);
+                    const pt2 = getReel1DPos(2, 10, W, H);
+                    drawReelCurvedArc(ctx, { x: pt1.x, y: pt1.y - 18 }, { x: pt2.x, y: pt2.y - 18 }, tArc, '#FFFF00', -65, 4.2);
+
+                    if (tArc > 0.25) {
+                        ctx.fillStyle = '#FFFF00';
+                        ctx.font = 'bold 15px monospace';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(isFR ? '+1 pas sur la droite' : '+1 step along the line', 0.5 * (pt1.x + pt2.x), pt1.y - 72);
+                    }
+                }
+
+                // STEP 2: UNFOLDING 1D LINE INTO 2D QUADRATIC PYRAMID (0..35, S_0..S_5)
+                else if (st === 2) {
+                    const uUnfold = smoothstepJS(p / 0.75);
+                    const interpFn = (n) => {
+                        const p1 = getReel1DPos(n, 35, W, H);
+                        const p2 = getReel2DPos(n, 5, W, H);
+                        return {
+                            x: (1 - uUnfold) * p1.x + uUnfold * p2.x,
+                            y: (1 - uUnfold) * p1.y + uUnfold * p2.y
+                        };
+                    };
+                    if (uUnfold < 0.95) {
+                        ctx.save();
+                        ctx.globalAlpha = 1 - uUnfold;
+                        ctx.strokeStyle = '#EF4444';
+                        ctx.lineWidth = 3;
+                        ctx.beginPath();
+                        ctx.moveTo(40, H * 0.52);
+                        ctx.lineTo(W - 40, H * 0.52);
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+                    if (uUnfold > 0.4) {
+                        drawResidentPeanoLeavesCanvas(ctx, 0, 5, uUnfold * 0.9, '#83C167', '#FFFF00', '#58C4DD', true);
+                    }
+                    const hl = new Set([0, 1, 2, 6, 12, 20, 30]);
+                    const ncols = { 0: '#FFFF00', 2: '#FFFF00', 6: '#FFFF00', 12: '#FFFF00', 20: '#FFFF00', 30: '#FFFF00', 1: '#F59E0B' };
+                    draw2DPyramidGrid(ctx, interpFn, 35, 5, uUnfold * 0.85, hl, ncols, pulseR);
+                }
+
+                // STEP 3: MULTI-VALUED ADDITION 1 (+)2 1 = {4, 5, 6}
+                else if (st === 3) {
+                    const tShoot = smoothstepJS(p / 0.65);
+                    drawResidentPeanoLeavesCanvas(ctx, 1, 4, 0.92, '#83C167', '#FFFF00', '#58C4DD', true);
+                    const hl = new Set(tShoot > 0.55 ? [1, 4, 5, 6] : [1]);
+                    const ncols = { 1: '#F59E0B', 4: '#83C167', 5: '#FFFF00', 6: '#58C4DD' };
+                    draw2DPyramidGrid(ctx, (n) => getReel2DPos(n, 4, W, H), 24, 4, 0.65, hl, ncols, pulseR);
+
+                    const p1 = getReel2DPos(1, 4, W, H);
+                    [[4, '#83C167'], [5, '#FFFF00'], [6, '#58C4DD']].forEach(([tgt, col]) => {
+                        const pt = getReel2DPos(tgt, 4, W, H);
+                        drawReelArrow(ctx, p1.x, p1.y, pt.x, pt.y, tShoot, col, 4.2, false);
+                    });
+                }
+
+                // STEP 4: BROKEN COMMUTATIVITY 2 (+)2 3 = {17,20,23} vs 3 (+)2 2 = {11,13,15}
+                else if (st === 4) {
+                    const t23 = smoothstepJS(p / 0.48);
+                    const t32 = smoothstepJS((p - 0.35) / 0.48);
+                    drawResidentPeanoLeavesCanvas(ctx, 2, 4, 0.6, '#38BDF8', '#38BDF8', '#38BDF8', false);
+                    drawResidentPeanoLeavesCanvas(ctx, 3, 4, 0.6, '#EC4899', '#EC4899', '#EC4899', false);
+
+                    const hl = new Set([2, 3]);
+                    if (t23 > 0.5) [17, 20, 23].forEach(x => hl.add(x));
+                    if (t32 > 0.5) [11, 13, 15].forEach(x => hl.add(x));
+                    const ncols = {
+                        2: '#38BDF8', 17: '#38BDF8', 20: '#38BDF8', 23: '#38BDF8',
+                        3: '#EC4899', 11: '#EC4899', 13: '#EC4899', 15: '#EC4899'
+                    };
+                    draw2DPyramidGrid(ctx, (n) => getReel2DPos(n, 4, W, H), 24, 4, 0.55, hl, ncols, pulseR);
+
+                    const p2 = getReel2DPos(2, 4, W, H);
+                    [17, 20, 23].forEach(tgt => {
+                        const pt = getReel2DPos(tgt, 4, W, H);
+                        drawReelArrow(ctx, p2.x, p2.y, pt.x, pt.y, t23, '#38BDF8', 3.8, false);
+                    });
+                    const p3 = getReel2DPos(3, 4, W, H);
+                    [11, 13, 15].forEach(tgt => {
+                        const pt = getReel2DPos(tgt, 4, W, H);
+                        drawReelArrow(ctx, p3.x, p3.y, pt.x, pt.y, t32, '#EC4899', 3.8, true);
+                    });
+                }
+
+                // STEP 5: THE MYSTERY OF 31 (3 (+)2 4 AND 4 (+)2 3 COLLIDE AT 31 IN S_5)
+                else if (st === 5) {
+                    const t34 = smoothstepJS(p / 0.45);
+                    const t43 = smoothstepJS((p - 0.35) / 0.45);
+                    drawResidentPeanoLeavesCanvas(ctx, 3, 5, 0.65, '#38BDF8', '#38BDF8', '#38BDF8', true);
+                    drawResidentPeanoLeavesCanvas(ctx, 4, 5, 0.65, '#EC4899', '#EC4899', '#EC4899', true);
+
+                    const hl = new Set([3, 4]);
+                    if (t34 > 0.5) [27, 31, 35].forEach(x => hl.add(x));
+                    if (t43 > 0.5) [25, 28, 31].forEach(x => hl.add(x));
+                    const ncols = {
+                        3: '#38BDF8', 27: '#38BDF8', 35: '#38BDF8',
+                        4: '#EC4899', 25: '#EC4899', 28: '#EC4899',
+                        31: (t34 > 0.6 && t43 > 0.6) ? '#FFFF00' : '#38BDF8'
+                    };
+                    draw2DPyramidGrid(ctx, (n) => getReel2DPos(n, 5, W, H), 35, 5, 0.55, hl, ncols, pulseR);
+
+                    const p3 = getReel2DPos(3, 5, W, H);
+                    [27, 31, 35].forEach(tgt => {
+                        const pt = getReel2DPos(tgt, 5, W, H);
+                        drawReelArrow(ctx, p3.x, p3.y, pt.x, pt.y, t34, tgt === 31 && t43 > 0.6 ? '#FFFF00' : '#38BDF8', 3.8, false);
+                    });
+                    const p4 = getReel2DPos(4, 5, W, H);
+                    [25, 28, 31].forEach(tgt => {
+                        const pt = getReel2DPos(tgt, 5, W, H);
+                        drawReelArrow(ctx, p4.x, p4.y, pt.x, pt.y, t43, tgt === 31 && t43 > 0.6 ? '#FFFF00' : '#EC4899', 3.8, true);
+                    });
+                }
+
+                // STEP 6: CUBIC FOLIATION (m=3) OR UNIVERSAL TRANSLATION (11 x 19 = 209)
+                else if (st === 6) {
+                    if (reelWidgetState.subMode6 === 'cubic') {
+                        const tShoot = smoothstepJS(p / 0.65);
+                        const getCubicPos = (n) => {
+                            const k = floorRoot(n, 3);
+                            const v0 = ((k + 1) ** 3 + k ** 3 - 1) / 2;
+                            const gv = n - v0;
+                            return { x: W / 2 + gv * 9.8, y: 58 + k * 96, k };
+                        };
+                        // Draw S_{0,3} .. S_{4,3}
+                        for (let k = 0; k <= 4; k++) {
+                            const pL = getCubicPos(k ** 3);
+                            const pR = getCubicPos((k + 1) ** 3 - 1);
+                            ctx.strokeStyle = REEL_SHELL_COLORS[k];
+                            ctx.lineWidth = 2.2;
+                            ctx.beginPath(); ctx.moveTo(pL.x, pL.y); ctx.lineTo(pR.x, pR.y); ctx.stroke();
+                            ctx.fillStyle = REEL_SHELL_COLORS[k];
+                            ctx.font = 'bold 11px monospace';
+                            ctx.textAlign = 'right';
+                            ctx.fillText(`S_${k},3`, Math.max(48, pL.x - 10), pL.y - (k === 4 ? 14 : 0));
+                        }
+                        // Draw curved cubic trajectories from anchor 1: L_{0,3}, V_{-3,3}, R_{6,3}
+                        [[0, '#83C167'], [0.5, '#FFFF00'], [1, '#58C4DD']].forEach(([lam, col]) => {
+                            ctx.strokeStyle = col;
+                            ctx.lineWidth = 3.2;
+                            ctx.beginPath();
+                            for (let s = 0; s <= 3 * tShoot; s += 0.1) {
+                                const kv = 1 + s;
+                                const dL = kv ** 3 - 1;
+                                const dR = (kv + 1) ** 3 - 8;
+                                const gv = -3 + (lam - 0.5) * (dR - dL);
+                                const x = W / 2 + gv * 9.8;
+                                const y = 58 + kv * 96;
+                                if (s === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+                            }
+                            ctx.stroke();
+                        });
+                        const keyCubic = [0, 1, 2, 3, 4, 7, 8, 14, 17, 20, 26, 27, 42, 45, 57, 63, 64, 91, 94, 118, 124];
+                        const hlCubic = new Set([1, 8, 14, 20, 27, 42, 57, 64, 91, 118]);
+                        const colCubic = { 1: '#F59E0B', 8: '#83C167', 27: '#83C167', 64: '#83C167', 14: '#FFFF00', 42: '#FFFF00', 91: '#FFFF00', 20: '#58C4DD', 57: '#58C4DD', 118: '#58C4DD' };
+                        keyCubic.forEach(n => {
+                            const pt = getCubicPos(n);
+                            const isHl = hlCubic.has(n);
+                            ctx.beginPath(); ctx.arc(pt.x, pt.y, isHl ? 13 : 9, 0, Math.PI * 2);
+                            ctx.fillStyle = colCubic[n] || '#0F172A'; ctx.fill();
+                            ctx.strokeStyle = isHl ? '#FFFFFF' : '#475569'; ctx.lineWidth = 1.8; ctx.stroke();
+                            ctx.fillStyle = colCubic[n] ? '#050811' : '#E2E8F0';
+                            ctx.font = 'bold 9.5px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                            ctx.fillText(n.toString(), pt.x, pt.y);
+                        });
+                    } else {
+                        // Reel #5: Universal Equation of Translation 11 x 18 = 198, 11 x 19 = 209, 11 x 20 = 220 in S_14
+                        const tFan = smoothstepJS(p / 0.65);
+                        const getTopPos = (n) => {
+                            const k = Math.floor(Math.sqrt(n));
+                            const gv = (n - k * k) - k;
+                            return { x: W / 2 + gv * 54, y: 45 + k * 58 };
+                        };
+                        const hl = new Set([11, 18, 19, 20]);
+                        const ncols = { 11: '#FFFFFF', 18: '#83C167', 19: '#FFFF00', 20: '#58C4DD' };
+                        draw2DPyramidGrid(ctx, getTopPos, 24, 4, 0.55, hl, ncols, pulseR);
+
+                        const yS14 = H - 62;
+                        ctx.strokeStyle = '#F59E0B'; ctx.lineWidth = 3.2;
+                        ctx.beginPath(); ctx.moveTo(95, yS14); ctx.lineTo(W - 95, yS14); ctx.stroke();
+                        ctx.fillStyle = '#F59E0B'; ctx.font = 'bold 13px monospace'; ctx.textAlign = 'right';
+                        ctx.fillText('S_14 (K = 3 + 11)', W - 95, yS14 - 16);
+
+                        const p11 = getTopPos(11);
+                        [
+                            [198, W / 2 - 165, '#83C167', '11×18=198 (L_2)'],
+                            [209, W / 2 - 54,  '#FFFF00', '11×19=209 (V_-1)'],
+                            [220, W / 2 + 110, '#58C4DD', '11×20=220 (R_4)']
+                        ].forEach(([val, tx, col, lbl]) => {
+                            drawReelArrow(ctx, p11.x, p11.y, tx, yS14, tFan, col, 4.0, false);
+                            if (tFan > 0.6) {
+                                ctx.beginPath(); ctx.arc(tx, yS14, 18, 0, Math.PI * 2);
+                                ctx.fillStyle = col; ctx.fill();
+                                ctx.strokeStyle = '#FFFFFF'; ctx.lineWidth = 2.5; ctx.stroke();
+                                ctx.fillStyle = '#050811'; ctx.font = 'bold 11.5px monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+                                ctx.fillText(val.toString(), tx, yS14);
+                                ctx.fillStyle = col; ctx.font = 'bold 11px monospace';
+                                ctx.fillText(lbl, tx, yS14 + 30);
+                            }
+                        });
+                    }
+                }
+            } else {
+                // MODE B: SANDBOX FREE CALCULATOR ON 2D PYRAMID (0..35, S_0..S_5)
+                const a = reelWidgetState.sandboxA;
+                const b = reelWidgetState.sandboxB;
+                const comp = reelWidgetState.sandboxCompare;
+                const tShoot = smoothstepJS(p / 0.55);
+
+                const tL = nablaM(a, b, 0, 2);
+                const tV = nablaM(a, b, 0.5, 2);
+                const tR = nablaM(a, b, 1, 2);
+
+                drawResidentPeanoLeavesCanvas(ctx, a, 5, 0.85, '#83C167', '#FFFF00', '#58C4DD', true);
+
+                const hl = new Set([a]);
+                const ncols = { [a]: '#F59E0B' };
+                if (tShoot > 0.45) {
+                    [tL, tV, tR].forEach(x => { if (x <= 35) hl.add(x); });
+                    ncols[tL] = '#83C167';
+                    ncols[tV] = '#FFFF00';
+                    ncols[tR] = '#58C4DD';
+                }
+
+                let rL = -1, rV = -1, rR = -1;
+                if (comp && b <= 24) {
+                    drawResidentPeanoLeavesCanvas(ctx, b, 5, 0.55, '#EC4899', '#EC4899', '#EC4899', false);
+                    hl.add(b);
+                    ncols[b] = '#EC4899';
+                    rL = nablaM(b, a, 0, 2);
+                    rV = nablaM(b, a, 0.5, 2);
+                    rR = nablaM(b, a, 1, 2);
+                    if (tShoot > 0.45) {
+                        [rL, rV, rR].forEach(x => {
+                            if (x <= 35) {
+                                hl.add(x);
+                                ncols[x] = [tL, tV, tR].includes(x) ? '#FFFF00' : '#EC4899';
+                            }
+                        });
+                    }
+                }
+
+                draw2DPyramidGrid(ctx, (n) => getReel2DPos(n, 5, W, H), 35, 5, 0.65, hl, ncols, pulseR);
+
+                const pA = getReel2DPos(a, 5, W, H);
+                [[tL, '#83C167'], [tV, '#FFFF00'], [tR, '#58C4DD']].forEach(([tgt, col]) => {
+                    if (tgt <= 35) {
+                        const pt = getReel2DPos(tgt, 5, W, H);
+                        drawReelArrow(ctx, pA.x, pA.y, pt.x, pt.y, tShoot, col, 4.0, false);
+                    }
+                });
+
+                if (comp && b <= 24) {
+                    const pB = getReel2DPos(b, 5, W, H);
+                    [rL, rV, rR].forEach(tgt => {
+                        if (tgt >= 0 && tgt <= 35) {
+                            const pt = getReel2DPos(tgt, 5, W, H);
+                            drawReelArrow(ctx, pB.x, pB.y, pt.x, pt.y, tShoot, '#EC4899', 3.6, true);
+                        }
+                    });
+                }
+            }
+
+            requestAnimationFrame(animateReelExplorer);
+        }
+
+        function initReelExplorerEvents() {
+            const canvas = document.getElementById('reel-explorer-canvas');
+            if (!canvas) return;
+            canvas.addEventListener('click', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                const scaleX = canvas.width / rect.width;
+                const scaleY = canvas.height / rect.height;
+                const mx = (e.clientX - rect.left) * scaleX;
+                const my = (e.clientY - rect.top) * scaleY;
+
+                const maxK = (reelWidgetState.mode === 'story' && (reelWidgetState.step === 3 || reelWidgetState.step === 4)) ? 4 : 5;
+                const maxN = Math.min(24, (maxK + 1) * (maxK + 1) - 1);
+
+                for (let n = 0; n <= maxN; n++) {
+                    const p = getReel2DPos(n, maxK, canvas.width, canvas.height);
+                    if (Math.hypot(mx - p.x, my - p.y) <= 20) {
+                        setReelWidgetMode('sandbox');
+                        document.getElementById('rw-input-a').value = n;
+                        const k = Math.floor(Math.sqrt(n));
+                        const curB = parseInt(document.getElementById('rw-input-b').value, 10) || 1;
+                        document.getElementById('rw-input-b').value = Math.max(1, Math.min(5 - k, curB));
+                        runReelSandbox(true);
+                        return;
+                    }
+                }
+            });
+        }
+
         // --- INITIALIZE ALL STORYTELLING WIDGETS ON LOAD ---
         window.addEventListener('DOMContentLoaded', () => {
             renderKaTeXElement(document.body);
             initUnfolder();
+            initReelExplorerEvents();
+            updateReelWidgetPanel();
+            requestAnimationFrame(animateReelExplorer);
             initInspectorEvents();
             updateCoordinateInspector();
             computeGeodesicRoute();
             runFoliatedCalculator();
             runFactorizationPrism();
-            updateHolographyExplorer();
             loadComments();
         });
     </script>
