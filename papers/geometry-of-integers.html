@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometry of Integers — Hassan Baloui | Archival Preprint Record</title>
+  <meta name="description" content="Foundational monograph breaking the unstated 1D ontological axiom of classical arithmetic. Constructs intrinsic m-degree power-shell foliations, three directional leaves (Left λ=0, Vertical λ=1/2, Right λ=1), non-commutative multi-directional operations (unique prime 31 additive intersection), double-cone origin reflection on ℤ₂, leaf-local triple prime factorizations, 1-zigzag Chebyshev geodesics, conical holonomy curvature, and machine-checked Lean 4 proofs." />
+  <meta name="keywords" content="Geometry of Integers, Hassan Baloui, discrete foliations, non-commutative arithmetic, Chebyshev geodesics, Lean 4, Zenodo 23456718" />
+  <meta name="author" content="Hassan Baloui" />
+  <link rel="canonical" href="https://www.new-mathematical-concepts.org/papers/geometry-of-integers.html" />
+
+  <!-- Highwire Press Meta Tags for Google Scholar Indexing (1 URL = 1 Article + Same-Domain PDF) -->
+  <meta name="citation_title" content="Geometry of Integers" />
+  <meta name="citation_author" content="Baloui, Hassan" />
+  <meta name="citation_publication_date" content="2026/10/18" />
+  <meta name="citation_online_date" content="2026/10/18" />
+  <meta name="citation_doi" content="10.5281/zenodo.23456718" />
+  <meta name="citation_public_url" content="https://www.new-mathematical-concepts.org/papers/geometry-of-integers.html" />
+  <meta name="citation_pdf_url" content="https://www.new-mathematical-concepts.org/pdfs/Geometry_of_Integers.pdf" />
+  <meta name="citation_language" content="en" />
+  <meta name="citation_keywords" content="Geometry of Integers, Hassan Baloui, discrete foliations, non-commutative arithmetic, Chebyshev geodesics, Lean 4, Zenodo 23456718" />
+
+  <!-- Schema.org ScholarlyArticle Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Geometry of Integers",
+    "name": "Geometry of Integers",
+    "author": {
+      "@type": "Person",
+      "name": "Hassan Baloui",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Independent Researcher (Ph.D., ENS Paris-Saclay)"
+      }
+    },
+    "datePublished": "2026-10-18",
+    "identifier": "https://doi.org/10.5281/zenodo.23456718",
+    "sameAs": ["https://doi.org/10.5281/zenodo.23456718"],
+    "url": "https://www.new-mathematical-concepts.org/papers/geometry-of-integers.html",
+    "contentUrl": "https://www.new-mathematical-concepts.org/pdfs/Geometry_of_Integers.pdf",
+    "description": "Foundational monograph breaking the unstated 1D ontological axiom of classical arithmetic. Constructs intrinsic m-degree power-shell foliations, three directional leaves (Left λ=0, Vertical λ=1/2, Right λ=1), non-commutative multi-directional operations (unique prime 31 additive intersection), double-cone origin reflection on ℤ₂, leaf-local triple prime factorizations, 1-zigzag Chebyshev geodesics, conical holonomy curvature, and machine-checked Lean 4 proofs."
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/portal.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <div id="portal-header"></div>
+  <div id="portal-topbar"></div>
+
+  <div class="w-full bg-white border-b border-slate-200">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <nav class="flex items-center gap-1.5 text-slate-600 font-medium truncate">
+        <a href="../index.html" class="text-[#1E3A8A] hover:underline font-bold" data-i18n="bcRoot">New Mathematical Concepts</a>
+        <span>/</span>
+        <a href="../publications.html" class="text-[#1E3A8A] hover:underline font-semibold" data-i18n="bcPubs">Publications</a>
+        <span>/</span>
+        <span class="font-bold text-slate-900 mono-num">DOI: 10.5281/zenodo.23456718</span>
+      </nav>
+      <a href="../pdfs/Geometry_of_Integers.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-[#1E3A8A] hover:bg-blue-900 text-white font-bold text-[11px] transition" data-i18n="btnDownloadPdf">⬇ Download Full-Text PDF</a>
+    </div>
+  </div>
+
+  <div class="max-w-[1320px] w-full mx-auto px-3 sm:px-6 py-5 flex-1">
+    <div class="flex flex-col lg:flex-row gap-6 items-start">
+
+      <aside id="guide-sidebar" class="hidden lg:block w-full lg:w-[275px] shrink-0 space-y-6">
+        <div>
+          <div class="flex items-center justify-between mb-2 px-1">
+            <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500" data-i18n="sidebarHeading">SCHOLARLY RECORD</div>
+            <button onclick="PortalShell.toggleMobileSidebar()" class="lg:hidden text-xs font-bold text-[#E11D48] px-2 py-0.5 rounded bg-rose-50 border border-rose-200">✕</button>
+          </div>
+          <div class="flex flex-col">
+            <a href="../publications.html" class="nav-page-btn"><span data-i18n="navAllPubs">← All Publications (2)</span></a>
+            <a href="../guides/foliations.html" id="sidebar-guide-link" class="nav-page-btn nav-page-active"><span data-i18n="navGuide">▶ Interactive Guide Lab</span><span>→</span></a>
+            <a href="../oeis.html" class="nav-page-btn"><span data-i18n="navOeis">OEIS Sequence Atlas →</span></a>
+            <a href="../publications.html" id="sidebar-other-paper" class="nav-page-btn"><span data-i18n="navOtherPaper">Companion Paper Record →</span></a>
+          </div>
+        </div>
+        <div id="portal-author-box" class="space-y-6"></div>
+      </aside>
+
+      <main id="paper-record-mount" data-pub-id="baloui-2026-geometry" class="flex-1 min-w-0 w-full space-y-6">
+        <article class="lib-box">
+          <div class="lib-box-header">
+            <span class="mono-num text-xs font-extrabold">DOI: 10.5281/zenodo.23456718</span>
+            <span class="mono-num text-xs text-slate-500">MSC 2020: 11A05, 11B83, 05B45, 51M20, 68V15</span>
+          </div>
+          <div class="lib-box-body space-y-4">
+            <div class="flex flex-wrap items-center gap-2 text-xs">
+              <span id="paper-date-dyn" class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 font-semibold">October 18, 2026</span>
+              <a href="../formalization.html" class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-[11px]">✓ Lean 4 Verified</a>
+              <span id="paper-hal-badge" class="hidden px-2.5 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-300 font-semibold text-[11px]"></span>
+            </div>
+
+            <div>
+              <h1 class="serif-heading text-2xl sm:text-3xl font-bold text-slate-900 leading-snug">Geometry of Integers</h1>
+              <p id="paper-subtitle-dyn" class="text-sm font-semibold text-[#0284C7] mt-1">Intrinsic m-Degree Foliations, Geodesic Routing, Non-Commutative 2D Arithmetic & Lean 4 Verification</p>
+              <div class="text-xs sm:text-sm text-slate-700 mt-2">
+                <strong>Dr. Hassan BALOUI</strong> — Mathematician &amp; Independent Researcher (Ph.D., ENS Paris-Saclay)
+              </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2.5 pt-1">
+              <a href="../pdfs/Geometry_of_Integers.pdf" target="_blank" rel="noopener" class="px-4 py-2 rounded bg-[#1E3A8A] hover:bg-blue-900 text-white text-xs font-bold transition" data-i18n="btnDownloadPdf">⬇ Download Full-Text PDF</a>
+              <a href="../guides/foliations.html" class="px-4 py-2 rounded bg-sky-50 hover:bg-sky-100 border border-sky-300 text-[#0369A1] text-xs font-bold transition" data-i18n="btnExploreGuide">▶ Explore in Interactive Laboratory</a>
+              <a href="https://doi.org/10.5281/zenodo.23456718" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 mono-num text-xs font-bold transition" data-i18n="btnZenodoRecord">Zenodo DOI Record ↗</a>
+            </div>
+
+            <div class="pt-3 border-t border-slate-200 space-y-2">
+              <h2 class="text-xs font-extrabold uppercase tracking-wider text-[#1E3A8A]" data-i18n="lblAbstract">Abstract</h2>
+              <p id="paper-abstract-dyn" class="text-sm text-slate-700 leading-relaxed">Foundational monograph breaking the unstated 1D ontological axiom of classical arithmetic. Constructs intrinsic m-degree power-shell foliations, three directional leaves (Left λ=0, Vertical λ=1/2, Right λ=1), non-commutative multi-directional operations (unique prime 31 additive intersection), double-cone origin reflection on ℤ₂, leaf-local triple prime factorizations, 1-zigzag Chebyshev geodesics, conical holonomy curvature, and machine-checked Lean 4 proofs.</p>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-2">
+              <span class="text-xs font-bold text-slate-600" data-i18n="lblConnectedOeis">Connected OEIS Sequences:</span>
+              <div id="paper-oeis-pills" class="flex flex-wrap gap-1.5"></div>
+            </div>
+          </div>
+        </article>
+
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="lblKeyResults">Principal Theorems &amp; Structural Results</span>
+          </div>
+          <div id="paper-highlights-list" class="lib-box-body grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+        </div>
+
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="lblBibtex">BibTeX Citation</span>
+            <button onclick="copyCurrentPaperBib(this)" class="px-3 py-1 rounded bg-[#1E3A8A] hover:bg-blue-900 text-white text-xs font-bold transition" data-i18n="btnCopyBib">Copy BibTeX</button>
+          </div>
+          <div class="lib-box-body">
+            <pre class="p-3.5 rounded bg-slate-900 text-slate-100 mono-num text-xs overflow-x-auto leading-relaxed">@article{Baloui2026GeometryOfIntegers,
+  author  = {Baloui, Hassan},
+  title   = {Geometry of Integers},
+  year    = {2026},
+  month   = {oct},
+  doi     = {10.5281/zenodo.23456718},
+  url     = {https://doi.org/10.5281/zenodo.23456718}
+}</pre>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="portal-footer"></div>
+  <script src="../data/registry.js"></script>
+  <script src="../assets/shell.js"></script>
+  <script src="../assets/paper-view.js"></script>
+</body>
+</html>

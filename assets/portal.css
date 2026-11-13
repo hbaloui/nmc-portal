@@ -1,0 +1,240 @@
+/* Geometry of Integers & Zeta Hierarchy — Shared SMU LibGuides Stylesheet */
+    :root {
+      --bg-page: #FFFFFF;
+      --bg-box-header: #F1F5F9;
+      --border-lib: #CBD5E1;
+      --navy-active: #1E3A8A;
+      --crimson-alice: #E11D48;
+      --cobalt-bob: #0284C7;
+      --emerald-match: #059669;
+      --ink-main: #0F172A;
+      --ink-muted: #475569;
+    }
+    body {
+      background-color: var(--bg-page);
+      color: var(--ink-main);
+      font-family: 'Inter', 'Cairo', sans-serif;
+      line-height: 1.6;
+    }
+    [dir="rtl"] body, [dir="rtl"] .rtl-font {
+      font-family: 'Cairo', 'Inter', sans-serif;
+    }
+    .serif-heading {
+      font-family: 'Crimson Pro', 'Cairo', Georgia, serif;
+    }
+    .mono-num {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Authentic LaTeX / Computer Modern Math Typography */
+    .math-latex {
+      font-family: 'KaTeX_Main', 'Latin Modern Math', 'Computer Modern Serif', 'Cambria Math', 'Crimson Pro', 'Times New Roman', serif;
+      letter-spacing: 0.01em;
+    }
+    .math-var {
+      font-family: 'KaTeX_Math', 'Latin Modern Math', 'Computer Modern Serif', 'Crimson Pro', Georgia, serif;
+      font-style: italic;
+    }
+    /* SMU LibGuides Style Content Box */
+    .lib-box {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .lib-box-header {
+      background: #F1F5F9;
+      border-bottom: 1px solid #CBD5E1;
+      padding: 0.65rem 1rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #1E3A8A;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .lib-box-body {
+      padding: 1.25rem;
+    }
+    /* Left Sidebar Page Navigation List (SMU LibGuides Style) */
+    .nav-page-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+      padding: 0.62rem 0.85rem;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #1E293B;
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-bottom: none;
+      transition: all 0.15s ease;
+    }
+    [dir="rtl"] .nav-page-btn {
+      text-align: right;
+    }
+    .nav-page-btn:first-of-type {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    .nav-page-btn:last-of-type {
+      border-bottom: 1px solid #CBD5E1;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .nav-page-btn:hover {
+      background: #E2E8F0;
+      color: #1E3A8A;
+    }
+    .nav-page-active {
+      background: #1E3A8A !important;
+      color: #FFFFFF !important;
+      border-color: #1E3A8A !important;
+      font-weight: 700;
+    }
+    .nav-sublist {
+      background: #F8FAFC;
+      border-left: 3px solid #1E3A8A;
+      border-right: 1px solid #CBD5E1;
+      border-bottom: 1px solid #CBD5E1;
+      padding: 0.4rem 0.75rem 0.5rem 1.1rem;
+      font-size: 0.76rem;
+      color: #475569;
+    }
+    [dir="rtl"] .nav-sublist {
+      border-left: 1px solid #CBD5E1;
+      border-right: 3px solid #1E3A8A;
+      padding: 0.4rem 1.1rem 0.5rem 0.75rem;
+    }
+    /* Alice & Bob Color-Matched Dialogue Boxes on White Paper */
+    .alice-callout {
+      background: #FFF1F2;
+      border: 1.5px solid #E11D48;
+      color: #BE123C;
+      border-radius: 6px;
+    }
+    .bob-callout {
+      background: #F0F9FF;
+      border: 1.5px solid #0284C7;
+      color: #0369A1;
+      border-radius: 6px;
+    }
+    /* Crisp White TikZ-Style Canvas Frame */
+    .tikz-canvas-frame {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.03);
+    }
+    .subtab-btn {
+      padding: 0.45rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
+      color: #475569;
+      transition: all 0.15s;
+    }
+    .subtab-btn:hover {
+      color: #1E3A8A;
+      background: #F8FAFC;
+    }
+    .subtab-active {
+      color: #1E3A8A;
+      border-bottom-color: #1E3A8A;
+      background: #FFFFFF;
+    }
+/* ===================================================================== */
+    /* 5-PILLAR GLOBAL NAVIGATION & SCALABLE MULTI-PAGE EXTENSIONS           */
+    /* ===================================================================== */
+    .pillar-bar {
+      background: #F8FAFC;
+      border-bottom: 1px solid #CBD5E1;
+    }
+    .pillar-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.79rem;
+      font-weight: 700;
+      color: #334155;
+      border-bottom: 2.5px solid transparent;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .pillar-link:hover {
+      color: #1E3A8A;
+      background: #EFF6FF;
+    }
+    .pillar-link-active {
+      color: #1E3A8A !important;
+      border-bottom-color: #1E3A8A !important;
+      background: #FFFFFF;
+    }
+    .pillar-dropdown-wrap {
+      position: relative;
+    }
+    .pillar-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 290px;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 0 0 6px 6px;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12);
+      z-index: 50;
+      padding: 0.35rem 0;
+    }
+    [dir="rtl"] .pillar-dropdown-menu {
+      left: auto;
+      right: 0;
+    }
+    .pillar-dropdown-wrap:hover .pillar-dropdown-menu,
+    .pillar-dropdown-wrap:focus-within .pillar-dropdown-menu {
+      display: block;
+    }
+    .pillar-dropdown-item {
+      display: block;
+      padding: 0.55rem 0.9rem;
+      font-size: 0.78rem;
+      color: #1E293B;
+      border-left: 3px solid transparent;
+      transition: background 0.12s ease;
+    }
+    [dir="rtl"] .pillar-dropdown-item {
+      border-left: none;
+      border-right: 3px solid transparent;
+    }
+    .pillar-dropdown-item:hover {
+      background: #F1F5F9;
+      color: #1E3A8A;
+      border-left-color: #1E3A8A;
+    }
+    [dir="rtl"] .pillar-dropdown-item:hover {
+      border-right-color: #1E3A8A;
+    }
+    .doi-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      color: #334155;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+    .doi-badge-pill:hover {
+      color: #1E3A8A;
+      border-color: #1E3A8A;
+      background: #EFF6FF;
+    }

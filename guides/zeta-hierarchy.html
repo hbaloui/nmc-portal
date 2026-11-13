@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guide II: Minimal Balancing Multiplier &amp; The Zeta Hierarchy | Hassan Baloui</title>
+  <meta name="description" content="Interactive 3-page analytic number theory guide on central conjugate divisors, the minimal balancing multiplier (OEIS A382286), the 4:1 spectral gap, the square-multiplier set (OEIS A401528), Apéry's constant ζ(3), and r-degree Riemann zeta unification by Dr. Hassan Baloui." />
+  <meta name="author" content="Hassan Baloui" />
+  <link rel="canonical" href="https://www.new-mathematical-concepts.org/guides/zeta-hierarchy.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/portal.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+  <div id="portal-header"></div>
+  <div id="portal-topbar"></div>
+
+  <div class="w-full bg-white border-b border-slate-200">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <nav class="flex items-center gap-1.5 text-slate-600 font-medium truncate">
+        <a href="../index.html" class="text-[#1E3A8A] hover:underline font-bold" data-i18n="bcRoot">New Mathematical Concepts</a>
+        <span>/</span>
+        <span class="font-semibold text-[#0284C7]" data-i18n="guide2Badge">Guide II: Balancing Multiplier &amp; Zeta (ζ)</span>
+        <span>/</span>
+        <span id="breadcrumb-current" class="font-bold text-slate-900 truncate">1. Central Divisors &amp; 4:1 Gap</span>
+      </nav>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="foliations.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 font-semibold text-[11px] transition" data-i18n="btnBackGuide1">← Guide I: 2D Foliations</a>
+        <a href="../papers/zeta-hierarchy.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-sky-50 hover:bg-sky-100 text-[#0369A1] border border-sky-300 font-bold text-[11px] transition" data-i18n="btnPaper2Record">📄 Paper II &amp; BibTeX (24109170)</a>
+      </div>
+    </div>
+    <div class="lg:hidden flex items-center gap-1.5 overflow-x-auto px-4 py-1.5 bg-slate-50 border-t border-slate-200 text-[11px] font-bold">
+      <button onclick="selectZetaPage(1)" id="mob-pill-1" class="px-2.5 py-1 rounded-full whitespace-nowrap bg-[#1E3A8A] text-white" data-i18n="mobZ1">1. β(n) &amp; 4:1 Gap</button>
+      <button onclick="selectZetaPage(2)" id="mob-pill-2" class="px-2.5 py-1 rounded-full whitespace-nowrap bg-slate-100 text-slate-700" data-i18n="mobZ2">2. Square Set &amp; ζ(3)</button>
+      <button onclick="selectZetaPage(3)" id="mob-pill-3" class="px-2.5 py-1 rounded-full whitespace-nowrap bg-slate-100 text-slate-700" data-i18n="mobZ3">3. r-Degree ζ(s)</button>
+    </div>
+  </div>
+
+  <div class="max-w-[1320px] w-full mx-auto px-3 sm:px-6 py-5 flex-1">
+    <div class="flex flex-col lg:flex-row gap-6 items-start">
+      <aside id="guide-sidebar" class="hidden lg:block w-full lg:w-[275px] shrink-0 space-y-6">
+        <div>
+          <div class="flex items-center justify-between mb-2 px-1">
+            <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500" data-i18n="sidebarGuide2Heading">GUIDE II — 3 INTERACTIVE PAGES</div>
+            <button onclick="PortalShell.toggleMobileSidebar()" class="lg:hidden text-xs font-bold text-[#E11D48] px-2 py-0.5 rounded bg-rose-50 border border-rose-200">✕</button>
+          </div>
+          <div class="flex flex-col">
+            <button onclick="selectZetaPage(1, true)" id="nav-btn-1" class="nav-page-btn nav-page-active"><span data-i18n="navZ1">1. Central Divisors &amp; 4:1 Gap</span><span class="text-xs opacity-75">▸</span></button>
+            <div id="nav-sub-1" class="nav-sublist space-y-1">
+              <div class="hover:text-[#1E3A8A] cursor-pointer" onclick="selectZetaPage(1, true)" data-i18n="subZ1_1">• Prime Ceiling β(p) = ⌊√p⌋²</div>
+              <div class="hover:text-[#1E3A8A] cursor-pointer" onclick="selectZetaPage(1, true)" data-i18n="subZ1_2">• Shell S_k Spectral Bar Inspector</div>
+            </div>
+            <button onclick="selectZetaPage(2, true)" id="nav-btn-2" class="nav-page-btn"><span data-i18n="navZ2">2. Square-Multiplier Set &amp; ζ(3)</span><span class="text-xs opacity-75">▸</span></button>
+            <div id="nav-sub-2" class="nav-sublist hidden space-y-1">
+              <div class="hover:text-[#1E3A8A] cursor-pointer" onclick="selectZetaPage(2, true)" data-i18n="subZ2_1">• Set Q₂ (OEIS A401528) &amp; n = 32</div>
+              <div class="hover:text-[#1E3A8A] cursor-pointer" onclick="selectZetaPage(2, true)" data-i18n="subZ2_2">• Apéry’s Constant ζ(3) Convergence</div>
+            </div>
+            <button onclick="selectZetaPage(3, true)" id="nav-btn-3" class="nav-page-btn"><span data-i18n="navZ3">3. r-Degree Zeta Hierarchy</span><span class="text-xs opacity-75">▸</span></button>
+            <div id="nav-sub-3" class="nav-sublist hidden space-y-1">
+              <div class="hover:text-[#1E3A8A] cursor-pointer" onclick="selectZetaPage(3, true)" data-i18n="subZ3_1">• Power-Balanced Sets on ℕ_r</div>
+              <div class="hover:text-[#1E3A8A] cursor-pointer" onclick="selectZetaPage(3, true)" data-i18n="subZ3_2">• Odd ζ(2s+1) vs. Even ζ(2s) Split</div>
+            </div>
+          </div>
+        </div>
+        <div id="portal-author-box" class="space-y-6"></div>
+      </aside>
+
+      <main class="flex-1 min-w-0 w-full">
+        <div id="zeta-view-1" class="space-y-6">
+          <div class="lib-box">
+            <div class="lib-box-header">
+              <span data-i18n="z1Box1Title">Central Conjugate Divisors, Exact Prime Detection &amp; The 4:1 Intra-Shell Spectral Gap</span>
+              <span class="text-xs math-latex text-slate-600"><span class="latex-eq" data-tex="\pi(x) = \sum_{n=2}^{\lfloor x \rfloor} \left\lfloor \frac{\beta(n)}{\lfloor\sqrt{n}\rfloor^2} \right\rfloor">π(x)</span></span>
+            </div>
+            <div class="lib-box-body space-y-3 text-sm text-slate-700 leading-relaxed">
+              <p data-i18n="z1Para1"></p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-1 text-xs">
+                <div class="p-3 rounded bg-slate-50 border border-slate-200"><div class="font-extrabold text-[#1E3A8A] mb-1" data-i18n="z1Card1Title"></div><p class="text-slate-600" data-i18n="z1Card1Body"></p></div>
+                <div class="p-3 rounded bg-rose-50/70 border border-rose-200"><div class="font-extrabold text-[#E11D48] mb-1" data-i18n="z1Card2Title"></div><p class="text-slate-600" data-i18n="z1Card2Body"></p></div>
+                <div class="p-3 rounded bg-sky-50/70 border border-sky-200"><div class="font-extrabold text-[#0284C7] mb-1" data-i18n="z1Card3Title"></div><p class="text-slate-600" data-i18n="z1Card3Body"></p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lib-box">
+            <div class="lib-box-header">
+              <span data-i18n="z1Box2Title">Interactive Spectral Gap Lab: Quadratic Shell S_k = [k², k² + 2k]</span>
+              <span class="text-xs font-mono text-slate-500">OEIS A382286 • A381054</span>
+            </div>
+            <div class="lib-box-body space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-3 bg-slate-50 p-3 rounded border border-slate-200 items-center">
+                <div class="md:col-span-5 flex items-center gap-3">
+                  <span class="text-xs font-bold text-slate-800 whitespace-nowrap"><span data-i18n="lblShellK">Shell Index k:</span> <span id="z1-k-val" class="mono-num text-[#1E3A8A]">4</span></span>
+                  <input id="z1-slider-k" type="range" min="2" max="18" value="4" oninput="onZetaShellSlider()" class="w-full accent-[#1E3A8A] cursor-pointer" />
+                </div>
+                <div class="md:col-span-3 flex items-center gap-2">
+                  <span class="text-xs font-bold text-slate-800 whitespace-nowrap" data-i18n="lblInspectInt">Integer n:</span>
+                  <input id="z1-input-n" type="number" min="2" max="360" value="17" oninput="onZetaInputN()" class="w-20 px-2 py-1 rounded border border-slate-300 mono-num text-xs font-bold text-[#1E3A8A] bg-white" />
+                </div>
+                <div class="md:col-span-4 flex flex-wrap items-center justify-end gap-1.5 text-[11px] font-bold mono-num">
+                  <button onclick="setZetaPreset(17)" class="px-2 py-1 rounded bg-rose-50 border border-rose-300 text-[#BE123C]">n=17</button>
+                  <button onclick="setZetaPreset(22)" class="px-2 py-1 rounded bg-white border border-slate-300 text-slate-700">n=22</button>
+                  <button onclick="setZetaPreset(32)" class="px-2 py-1 rounded bg-amber-50 border border-amber-300 text-amber-900">n=32</button>
+                  <button onclick="setZetaPreset(76)" class="px-2 py-1 rounded bg-sky-50 border border-sky-300 text-[#0369A1]">n=76</button>
+                </div>
+              </div>
+              <div class="tikz-canvas-frame relative w-full h-[300px] sm:h-[330px]"><canvas id="zetaGapCanvas" class="w-full h-full block cursor-pointer"></canvas></div>
+              <div class="text-[11px] text-slate-500 text-center" data-i18n="z1ClickBarHint"></div>
+              <div id="zeta-n-readout" class="p-3.5 rounded bg-slate-50 border border-slate-300 text-xs space-y-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="zeta-view-2" class="hidden space-y-6">
+          <div class="lib-box">
+            <div class="lib-box-header">
+              <span data-i18n="z2Box1Title">The Square-Multiplier Set Q₂ (OEIS A401528) &amp; Apéry’s Constant ζ(3)</span>
+              <span class="text-xs math-latex text-slate-600"><span class="latex-eq" data-tex="\sum_{n \le x} \beta(n) \sim \frac{\zeta(3)}{2}\frac{x^2}{\log x}">Moment</span></span>
+            </div>
+            <div class="lib-box-body space-y-4 text-sm text-slate-700 leading-relaxed">
+              <p data-i18n="z2Para1"></p>
+              <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-50 p-3 rounded border border-slate-200">
+                <div class="flex items-center gap-3 flex-1 min-w-[220px]">
+                  <span class="text-xs font-bold text-slate-800 whitespace-nowrap"><span data-i18n="lblCutoffX">Sample Cutoff X:</span> <span id="z2-x-val" class="mono-num text-[#1E3A8A]">1500</span></span>
+                  <input id="z2-slider-x" type="range" min="200" max="2500" step="50" value="1500" oninput="renderZetaAperyLab()" class="w-full accent-[#1E3A8A] cursor-pointer" />
+                </div>
+                <a href="../oeis.html#A401528" class="px-3 py-1.5 rounded bg-[#1E3A8A] hover:bg-blue-900 text-white text-xs font-bold mono-num transition">OEIS A401528 →</a>
+              </div>
+              <div class="tikz-canvas-frame relative w-full h-[270px] sm:h-[300px]"><canvas id="zetaAperyCanvas" class="w-full h-full block"></canvas></div>
+              <div id="zeta-apery-stats" class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="zeta-view-3" class="hidden space-y-6">
+          <div class="lib-box">
+            <div class="lib-box-header">
+              <span data-i18n="z3Box1Title">Foliated Zeta Unification Across r-Degree Power Shells ℕ_r</span>
+              <span class="text-xs math-latex text-slate-600"><span class="latex-eq" data-tex="\mathbb{N}_{2s} \Rightarrow \zeta(2s+1) \;\vert\; \mathbb{N}_{2s-1} \Rightarrow \zeta(2s)">Parity</span></span>
+            </div>
+            <div class="lib-box-body space-y-4 text-sm text-slate-700 leading-relaxed">
+              <p data-i18n="z3Para1"></p>
+              <div class="flex flex-wrap items-center gap-2 bg-slate-50 p-3 rounded border border-slate-200">
+                <span class="text-xs font-bold text-slate-800 mr-1" data-i18n="lblSelectDegreeR">Select Shell Degree r:</span>
+                <button onclick="setZetaDegreeR(1)" id="z3-r-1" class="px-3 py-1 rounded text-xs font-bold border border-slate-300 bg-white text-slate-700 mono-num">r = 1 → ζ(2)</button>
+                <button onclick="setZetaDegreeR(2)" id="z3-r-2" class="px-3 py-1 rounded text-xs font-bold bg-[#1E3A8A] text-white mono-num">r = 2 → ζ(3)</button>
+                <button onclick="setZetaDegreeR(3)" id="z3-r-3" class="px-3 py-1 rounded text-xs font-bold border border-slate-300 bg-white text-slate-700 mono-num">r = 3 → ζ(4)</button>
+                <button onclick="setZetaDegreeR(4)" id="z3-r-4" class="px-3 py-1 rounded text-xs font-bold border border-slate-300 bg-white text-slate-700 mono-num">r = 4 → ζ(5)</button>
+                <button onclick="setZetaDegreeR(5)" id="z3-r-5" class="px-3 py-1 rounded text-xs font-bold border border-slate-300 bg-white text-slate-700 mono-num">r = 5 → ζ(6)</button>
+                <button onclick="setZetaDegreeR(6)" id="z3-r-6" class="px-3 py-1 rounded text-xs font-bold border border-slate-300 bg-white text-slate-700 mono-num">r = 6 → ζ(7)</button>
+              </div>
+              <div id="zeta-degree-card" class="p-4 rounded-md bg-slate-50 border border-slate-300 text-xs space-y-2"></div>
+              <div class="overflow-x-auto border border-slate-300 rounded-md">
+                <table class="w-full text-left rtl:text-right border-collapse text-xs">
+                  <thead>
+                    <tr class="bg-slate-100 border-b border-slate-300 text-slate-800">
+                      <th class="py-2.5 px-3 font-bold" data-i18n="thZRegime">Foliation Space</th>
+                      <th class="py-2.5 px-3 font-bold" data-i18n="thZShell">Power Shell S_{k,r}</th>
+                      <th class="py-2.5 px-3 font-bold" data-i18n="thZParity">Degree Parity</th>
+                      <th class="py-2.5 px-3 font-bold" data-i18n="thZConst">Zeta Value ζ(r+1)</th>
+                      <th class="py-2.5 px-3 font-bold" data-i18n="thZNature">Arithmetic Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="zeta-parity-tbody" class="divide-y divide-slate-200 math-latex"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-slate-300 flex flex-wrap items-center justify-between gap-2">
+          <button onclick="prevZetaPage()" id="btn-prev-page" class="px-3.5 py-2 rounded bg-slate-100 hover:bg-slate-200 border border-slate-300 text-xs font-bold text-slate-700 transition">« Previous</button>
+          <span id="pager-indicator" class="text-xs font-semibold text-slate-500">1 / 3</span>
+          <div class="flex items-center gap-2">
+            <button onclick="nextZetaPage()" id="btn-next-page" class="px-3.5 py-2 rounded bg-[#1E3A8A] hover:bg-blue-900 text-xs font-bold text-white transition">Next »</button>
+            <a href="../oeis.html" id="btn-goto-oeis" class="hidden px-3.5 py-2 rounded bg-[#059669] hover:bg-emerald-700 text-xs font-bold text-white transition" data-i18n="btnNextOeis">Explore Pillar 3: OEIS Sequence Atlas (5) »</a>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="portal-footer"></div>
+  <script src="../data/registry.js"></script>
+  <script src="../assets/shell.js"></script>
+  <script src="../assets/zeta-guide.js"></script>
+</body>
+</html>
