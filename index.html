@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Mathematical Concepts — Dr. Hassan Baloui | The Geometry of Integers &amp; Derived Horizons</title>
+  <meta name="description" content="Official mathematical research portal and interactive laboratory by Dr. Hassan Baloui. Rooted in the Geometry of Integers: intrinsic power-shell coordinates, non-commutative 2D foliated arithmetic, minimal balancing multipliers, OEIS sequences, Lean 4 formal proofs, and the Riemann zeta hierarchy." />
+  <meta name="keywords" content="Hassan Baloui, Geometry of Integers, power shells, discrete foliations, non-commutative arithmetic, Minimal Balancing Multiplier, Riemann zeta function, Apéry's constant, Lean 4, OEIS A382286, OEIS A401528, Zenodo 23456718, Zenodo 24109170" />
+  <meta name="author" content="Hassan Baloui" />
+  <link rel="canonical" href="https://www.new-mathematical-concepts.org/" />
+
+  <!-- Schema.org JSON-LD Knowledge Graph: Geometry of Integers as Foundational Root + Derived Works -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.new-mathematical-concepts.org/#website",
+        "url": "https://www.new-mathematical-concepts.org/",
+        "name": "New Mathematical Concepts — The Geometry of Integers Research Portal",
+        "inLanguage": ["en", "fr", "ar"],
+        "publisher": { "@id": "https://www.new-mathematical-concepts.org/#author" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.new-mathematical-concepts.org/#author",
+        "name": "Hassan Baloui",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Mathematician & Independent Researcher",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "École Normale Supérieure de Paris-Saclay"
+        },
+        "url": "https://www.new-mathematical-concepts.org/"
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "@id": "https://www.new-mathematical-concepts.org/#foundation",
+        "headline": "Geometry of Integers",
+        "author": { "@id": "https://www.new-mathematical-concepts.org/#author" },
+        "datePublished": "2026-10-18",
+        "identifier": "https://doi.org/10.5281/zenodo.23456718",
+        "url": "https://www.new-mathematical-concepts.org/papers/geometry-of-integers.html",
+        "sameAs": [
+          "https://doi.org/10.5281/zenodo.23456718",
+          "https://zenodo.org/records/23456718"
+        ]
+      },
+      {
+        "@type": "ScholarlyArticle",
+        "headline": "The Minimal Balancing Multiplier and the Riemann Zeta Function at Positive Integers",
+        "author": { "@id": "https://www.new-mathematical-concepts.org/#author" },
+        "datePublished": "2026-11-10",
+        "identifier": "https://doi.org/10.5281/zenodo.24109170",
+        "url": "https://www.new-mathematical-concepts.org/papers/zeta-hierarchy.html",
+        "isBasedOn": { "@id": "https://www.new-mathematical-concepts.org/#foundation" },
+        "sameAs": [
+          "https://doi.org/10.5281/zenodo.24109170",
+          "https://oeis.org/A381054",
+          "https://oeis.org/A382286",
+          "https://oeis.org/A382306",
+          "https://oeis.org/A383115",
+          "https://oeis.org/A401528"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/portal.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Shared 5-Pillar Header & Top Navigation -->
+  <div id="portal-header"></div>
+  <div id="portal-topbar"></div>
+
+  <!-- Main Two-Column SMU LibGuides Hub -->
+  <div class="max-w-[1320px] w-full mx-auto px-3 sm:px-6 py-5 flex-1">
+    <div class="flex flex-col lg:flex-row gap-6 items-start">
+
+      <!-- Left Sidebar: 5-Pillar Directory Map + Permanent Author Profile -->
+      <aside id="guide-sidebar" class="hidden lg:block w-full lg:w-[275px] shrink-0 space-y-6">
+        <div>
+          <div class="flex items-center justify-between mb-2 px-1">
+            <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500" data-i18n="hubSidebarTitle">
+              PORTAL ARCHITECTURE (5 PILLARS)
+            </div>
+            <button onclick="PortalShell.toggleMobileSidebar()" class="lg:hidden text-xs font-bold text-[#E11D48] px-2 py-0.5 rounded bg-rose-50 border border-rose-200">✕</button>
+          </div>
+          <div class="flex flex-col">
+            <a href="index.html" class="nav-page-btn nav-page-active">
+              <span data-i18n="sidePil1">1. Foundational Overview (GOI)</span>
+              <span class="text-xs opacity-75">▸</span>
+            </a>
+            <a href="guides/foliations.html" class="nav-page-btn">
+              <span data-i18n="sidePil2a">2A. Guide I: Foliations &amp; 2D Lab</span>
+              <span class="text-xs opacity-75">→</span>
+            </a>
+            <a href="guides/zeta-hierarchy.html" class="nav-page-btn">
+              <span data-i18n="sidePil2b">2B. Guide II: Multiplier &amp; Zeta (ζ)</span>
+              <span class="text-xs opacity-75">→</span>
+            </a>
+            <a href="oeis.html" class="nav-page-btn">
+              <span data-i18n="sidePil3">3. OEIS Sequence Atlas (5)</span>
+              <span class="text-xs opacity-75">→</span>
+            </a>
+            <a href="publications.html" class="nav-page-btn">
+              <span data-i18n="sidePil4">4. Preprints &amp; Publications</span>
+              <span class="text-xs opacity-75">→</span>
+            </a>
+            <a href="formalization.html" class="nav-page-btn">
+              <span data-i18n="sidePil5">5. Lean 4 Proofs &amp; Open Code</span>
+              <span class="text-xs opacity-75">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div id="portal-author-box" class="space-y-6"></div>
+      </aside>
+
+      <!-- Right Content Column: Strictly Ordered from Foundational Root -> Derived Lenses -> Unified Inspector -> Extensions -->
+      <main class="flex-1 min-w-0 w-full space-y-6">
+
+        <!-- BOX 1: PERMANENT FOUNDATIONAL CHARTER — THE GEOMETRY OF INTEGERS -->
+        <div class="lib-box !border-[#1E3A8A]">
+          <div class="lib-box-header !bg-[#1E3A8A] !text-white !border-[#1E3A8A]">
+            <span data-i18n="foundationHeader">★ Foundational Starting Point — The Geometry of Integers</span>
+            <span class="text-xs font-mono text-blue-100">DOI: 10.5281/zenodo.23456718 • Lean 4</span>
+          </div>
+          <div id="foundation-charter-body" class="lib-box-body"></div>
+        </div>
+
+        <!-- BOX 2: DERIVATION ARCHITECTURE — ONE GEOMETRIC FOUNDATION, MULTIPLE MATHEMATICAL LENSES -->
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="derivationBoxTitle">From One Foundation to Every Derived Horizon: Three Mathematical Lenses</span>
+            <span class="text-xs math-latex text-slate-600"><span class="latex-eq" data-tex="\mathcal{S}_{k,r} = [k^r, (k+1)^r - 1]">S_{k,r} = [k^r, (k+1)^r - 1]</span></span>
+          </div>
+          <div class="lib-box-body space-y-4">
+            <!-- Full-Width Root Trunk Banner -->
+            <div class="p-3.5 rounded-md bg-gradient-to-r from-slate-900 via-[#1E3A8A] to-slate-900 text-white text-center space-y-1 shadow-sm">
+              <div class="text-[10px] font-extrabold uppercase tracking-widest text-amber-300" data-i18n="trunkOverline">
+                ROOT ONTOLOGICAL FRAMEWORK
+              </div>
+              <div class="serif-heading text-lg sm:text-xl font-bold" data-i18n="trunkTitle">
+                The Geometry of Integers — Intrinsic Power-Shell Foliations
+              </div>
+              <p class="text-xs text-blue-100 max-w-3xl mx-auto leading-relaxed" data-i18n="trunkDesc"></p>
+            </div>
+
+            <!-- Visual Downward Stem Indicator -->
+            <div class="flex items-center justify-center gap-3 text-[11px] font-extrabold uppercase tracking-wider text-slate-500">
+              <span class="h-px w-12 sm:w-24 bg-slate-300"></span>
+              <span data-i18n="stemCaption">▼ Every Tool, Operation &amp; Invariant Flows from This Geometry ▼</span>
+              <span class="h-px w-12 sm:w-24 bg-slate-300"></span>
+            </div>
+
+            <!-- 3 Derived Lenses Grid (Auto-Rendered from PORTAL_REGISTRY.DERIVED_STREAMS) -->
+            <div id="derived-lenses-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-4"></div>
+          </div>
+        </div>
+
+        <!-- BOX 3: UNIFIED GEOMETRY-OF-INTEGERS INSPECTOR (1 Integer n -> Root Shell -> 3 Derived Lenses) -->
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="inspBoxTitle">Unified Geometry-of-Integers Inspector: One Integer n Across All Derived Lenses</span>
+            <span class="text-xs math-latex text-slate-600"><span class="latex-eq" data-tex="n \in \mathcal{S}_k \;\Longrightarrow\; \text{Lenses I, II, III}">n ∈ S_k ⇒ Lenses I, II, III</span></span>
+          </div>
+          <div class="lib-box-body space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-50 p-3 rounded border border-slate-200">
+              <div class="flex items-center gap-2.5">
+                <label for="hub-input-n" class="text-xs font-bold text-slate-800" data-i18n="lblEnterInt">Inspect Integer n (2 – 2000):</label>
+                <input id="hub-input-n" type="number" min="2" max="2000" value="76" oninput="updateHubInspector()"
+                       class="w-24 px-2.5 py-1 rounded border border-slate-300 mono-num text-sm font-bold text-[#1E3A8A] bg-white" />
+              </div>
+              <div class="flex flex-wrap items-center gap-1.5 text-xs">
+                <span class="text-slate-500 font-semibold mr-1" data-i18n="lblNotablePresets">Notable Integers:</span>
+                <button onclick="setHubN(17)" class="px-2.5 py-1 rounded bg-rose-50 hover:bg-rose-100 border border-rose-300 text-[#BE123C] font-bold mono-num">n = 17 (Prime)</button>
+                <button onclick="setHubN(31)" class="px-2.5 py-1 rounded bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-800 font-bold mono-num">n = 31 (⊕₂ Meet)</button>
+                <button onclick="setHubN(32)" class="px-2.5 py-1 rounded bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-900 font-bold mono-num">n = 32 (2⁵ Bound)</button>
+                <button onclick="setHubN(76)" class="px-2.5 py-1 rounded bg-sky-50 hover:bg-sky-100 border border-sky-300 text-[#0369A1] font-bold mono-num">n = 76 (β = 4)</button>
+                <button onclick="setHubN(861)" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-bold mono-num">n = 861 (3-FTA)</button>
+              </div>
+            </div>
+
+            <!-- Root Shell Banner + 3 Lens Readout Cards -->
+            <div id="hub-inspector-root" class="p-3 rounded bg-blue-50/70 border border-blue-200 text-xs sm:text-sm text-center"></div>
+            <div id="hub-inspector-cards" class="grid grid-cols-1 lg:grid-cols-3 gap-4"></div>
+          </div>
+        </div>
+
+        <!-- BOX 4: LATEST DERIVED RESEARCH PREPRINTS & EXTENSIONS -->
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="derivedPubsHeader">Recent Research Developments Derived from the Geometry of Integers</span>
+            <a href="publications.html" class="text-xs font-bold text-[#0284C7] hover:underline" data-i18n="linkFullBib">Full Bibliography →</a>
+          </div>
+          <div id="derived-preprints-body" class="lib-box-body space-y-4"></div>
+        </div>
+
+        <!-- BOX 5: INTERACTIVE GUIDES, OEIS ATLAS & LEAN 4 FORMALIZATION -->
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="guidesDirHeader">Pillar 2 — Thematic Interactive Laboratories</span>
+            <span class="text-xs font-mono text-slate-500" data-i18n="guidesDirBadge">Scoped Guides</span>
+          </div>
+          <div id="hub-guides-grid" class="lib-box-body grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="lib-box !mb-0">
+            <div class="lib-box-header">
+              <span data-i18n="oeisQuickHeader">Pillar 3 — Connected OEIS Sequences (5)</span>
+              <a href="oeis.html" class="text-xs font-bold text-[#0284C7] hover:underline" data-i18n="linkOpenAtlas">Open Atlas →</a>
+            </div>
+            <div class="lib-box-body space-y-3">
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="oeisQuickDesc"></p>
+              <div id="hub-oeis-pills" class="flex flex-wrap gap-2"></div>
+              <div class="pt-1">
+                <a href="oeis.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-[#1E3A8A] hover:bg-blue-900 text-white text-xs font-bold transition" data-i18n="btnLaunchOeis">
+                  ▶ Launch Live OEIS Plotter &amp; Term Calculator
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="lib-box !mb-0">
+            <div class="lib-box-header">
+              <span data-i18n="formalQuickHeader">Pillars 4 &amp; 5 — Archival Papers &amp; Lean 4 Code</span>
+              <a href="publications.html" class="text-xs font-bold text-[#0284C7] hover:underline" data-i18n="linkAllPubs">Bibliography →</a>
+            </div>
+            <div class="lib-box-body space-y-3">
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="formalQuickDesc"></p>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <a href="papers/geometry-of-integers.html" class="px-2.5 py-1 rounded bg-blue-50 hover:bg-blue-100 border border-blue-300 text-[#1E3A8A] font-bold" data-i18n="pillPaper1">★ Foundational Monograph (23456718)</a>
+                <a href="papers/zeta-hierarchy.html" class="px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-800 font-semibold" data-i18n="pillPaper2">↳ Derived Paper II (24109170)</a>
+              </div>
+              <div class="pt-1 flex flex-wrap gap-2">
+                <a href="formalization.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold transition" data-i18n="btnOpenFormal">
+                  ✓ Inspect Lean 4 Proofs &amp; Verification Scripts
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Shared Academic Footer -->
+  <div id="portal-footer"></div>
+
+  <script src="data/registry.js"></script>
+  <script src="assets/shell.js"></script>
+  <script src="assets/overview-hub.js"></script>
+</body>
+</html>

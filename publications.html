@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications &amp; Preprints — Dr. Hassan Baloui | New Mathematical Concepts</title>
+  <meta name="description" content="Complete scholarly bibliography, Zenodo DOIs, archival PDFs, MSC classifications, OEIS links, and BibTeX citations for mathematical research by Dr. Hassan Baloui." />
+  <meta name="author" content="Hassan Baloui" />
+  <link rel="canonical" href="https://www.new-mathematical-concepts.org/publications.html" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/portal.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <div id="portal-header"></div>
+  <div id="portal-topbar"></div>
+
+  <!-- Sub-Context Breadcrumb Bar -->
+  <div class="w-full bg-white border-b border-slate-200">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <nav class="flex items-center gap-1.5 text-slate-600 font-medium truncate">
+        <a href="index.html" class="text-[#1E3A8A] hover:underline font-bold" data-i18n="bcRoot">New Mathematical Concepts</a>
+        <span>/</span>
+        <span class="font-bold text-slate-900" data-i18n="pubsBreadcrumb">Pillar 4: Preprints &amp; Publications</span>
+      </nav>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="oeis.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 font-semibold text-[11px] transition" data-i18n="btnBackOeis">
+          ← OEIS Atlas (5)
+        </a>
+        <a href="formalization.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-[11px] transition" data-i18n="btnGotoFormal">
+          Lean 4 &amp; Code →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Two-Column SMU LibGuides Layout -->
+  <div class="max-w-[1320px] w-full mx-auto px-3 sm:px-6 py-5 flex-1">
+    <div class="flex flex-col lg:flex-row gap-6 items-start">
+
+      <!-- Left Sidebar: Filter Menu + Direct Scholar Links + Shared Author Box -->
+      <aside id="guide-sidebar" class="hidden lg:block w-full lg:w-[275px] shrink-0 space-y-6">
+        <div>
+          <div class="flex items-center justify-between mb-2 px-1">
+            <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500" data-i18n="sidebarFilterHeading">
+              BIBLIOGRAPHY FILTERS
+            </div>
+            <button onclick="PortalShell.toggleMobileSidebar()" class="lg:hidden text-xs font-bold text-[#E11D48] px-2 py-0.5 rounded bg-rose-50 border border-rose-200">✕</button>
+          </div>
+          <div class="flex flex-col">
+            <button onclick="setPubFilter('ALL', true)" id="pub-flt-ALL" class="nav-page-btn nav-page-active">
+              <span data-i18n="fltAllPubs">All Works (2)</span>
+              <span class="text-xs opacity-75">▸</span>
+            </button>
+            <button onclick="setPubFilter('foundation', true)" id="pub-flt-foundation" class="nav-page-btn">
+              <span data-i18n="fltFoundation">★ Foundational Monograph</span>
+              <span class="text-xs opacity-75">▸</span>
+            </button>
+            <button onclick="setPubFilter('zeta', true)" id="pub-flt-zeta" class="nav-page-btn">
+              <span data-i18n="fltZetaBranch">Analytic Number Theory &amp; ζ(s)</span>
+              <span class="text-xs opacity-75">▸</span>
+            </button>
+            <button onclick="setPubFilter('foliations', true)" id="pub-flt-foliations" class="nav-page-btn">
+              <span data-i18n="fltGeoBranch">Discrete Foliations &amp; 2D Algebra</span>
+              <span class="text-xs opacity-75">▸</span>
+            </button>
+            <button onclick="setPubFilter('lean4', true)" id="pub-flt-lean4" class="nav-page-btn">
+              <span data-i18n="fltLean4">✓ Lean 4 Formalized</span>
+              <span class="text-xs opacity-75">▸</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="lib-box !mb-0">
+          <div class="lib-box-header">
+            <span data-i18n="scholarRecordsHeader">Archival Record Pages</span>
+          </div>
+          <div class="p-3.5 space-y-2 text-xs">
+            <p class="text-slate-600 leading-relaxed" data-i18n="scholarRecordsHint">
+              Dedicated single-article metadata pages formatted with Highwire Press tags for Google Scholar &amp; institutional indexing:
+            </p>
+            <a href="papers/zeta-hierarchy.html" class="block p-2 rounded bg-slate-50 hover:bg-blue-50 border border-slate-200 font-semibold text-[#1E3A8A] transition">
+              [2] Minimal Balancing Multiplier &amp; ζ(s) →
+            </a>
+            <a href="papers/geometry-of-integers.html" class="block p-2 rounded bg-slate-50 hover:bg-blue-50 border border-slate-200 font-semibold text-[#1E3A8A] transition">
+              [1] Geometry of Integers →
+            </a>
+          </div>
+        </div>
+
+        <div id="portal-author-box" class="space-y-6"></div>
+      </aside>
+
+      <!-- Right Main Content Column -->
+      <main class="flex-1 min-w-0 w-full space-y-6">
+
+        <!-- BOX 1: MASTER FILTERABLE BIBLIOGRAPHY -->
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="pubMainHeader">Master Research Bibliography — Preprints &amp; Monographs</span>
+            <button onclick="copyAllBibtex(this)" class="px-2.5 py-1 rounded bg-white hover:bg-blue-50 text-[#1E3A8A] border border-slate-300 text-xs font-bold transition" data-i18n="btnCopyAllBib">
+              Copy All BibTeX
+            </button>
+          </div>
+          <div id="pub-list-container" class="lib-box-body space-y-5"></div>
+        </div>
+
+        <!-- BOX 2: ARCHIVAL & CITATION GRAPH INTEGRITY -->
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="archPolicyHeader">Canonical DOI &amp; Open-Archive Indexing Architecture</span>
+            <span class="text-xs font-mono text-slate-500">Zenodo • HAL • OEIS</span>
+          </div>
+          <div class="lib-box-body grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div class="p-3.5 rounded bg-slate-50 border border-slate-200 space-y-1">
+              <div class="font-extrabold text-[#1E3A8A]" data-i18n="archCard1Title">1. Canonical Zenodo DOIs</div>
+              <p class="text-slate-600 leading-relaxed" data-i18n="archCard1Body">
+                Every manuscript carries a single permanent DataCite DOI on Zenodo so citations across preprints, repositories, and software remain unified.
+              </p>
+            </div>
+            <div class="p-3.5 rounded bg-slate-50 border border-slate-200 space-y-1">
+              <div class="font-extrabold text-[#0284C7]" data-i18n="archCard2Title">2. HAL &amp; Local PDF Mirrors</div>
+              <p class="text-slate-600 leading-relaxed" data-i18n="archCard2Body">
+                Full-text PDFs are mirrored on HAL (reusing the canonical Zenodo DOI) and hosted locally under /pdfs/ with dedicated Highwire Press metadata pages.
+              </p>
+            </div>
+            <div class="p-3.5 rounded bg-slate-50 border border-slate-200 space-y-1">
+              <div class="font-extrabold text-emerald-800" data-i18n="archCard3Title">3. Interactive &amp; Formal Verification</div>
+              <p class="text-slate-600 leading-relaxed" data-i18n="archCard3Body">
+                Each theoretical work pairs directly with a scoped interactive laboratory, live OEIS sequence calculators, or machine-checked Lean 4 proofs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div id="portal-footer"></div>
+
+  <script src="data/registry.js"></script>
+  <script src="assets/shell.js"></script>
+  <script>
+    const PUBS_I18N = {
+      EN: {
+        bcRoot: 'New Mathematical Concepts',
+        pubsBreadcrumb: 'Pillar 4: Preprints & Publications',
+        btnBackOeis: '← OEIS Atlas (5)',
+        btnGotoFormal: 'Lean 4 & Code →',
+        sidebarFilterHeading: 'BIBLIOGRAPHY FILTERS',
+        fltAllPubs: 'All Works (2)',
+        fltFoundation: '★ Foundational Monograph',
+        fltZetaBranch: 'Analytic Number Theory & ζ(s)',
+        fltGeoBranch: 'Discrete Foliations & 2D Algebra',
+        fltLean4: '✓ Lean 4 Formalized',
+        scholarRecordsHeader: 'Archival Record Pages',
+        scholarRecordsHint: 'Dedicated single-article metadata pages formatted with Highwire Press tags for Google Scholar & institutional indexing:',
+        pubMainHeader: 'Master Research Bibliography — Preprints & Monographs',
+        btnCopyAllBib: 'Copy All BibTeX',
+        typePreprint: 'Research Preprint',
+        typeMonograph: 'Foundational Monograph',
+        btnRecordPage: '📄 Scholar Record Page',
+        btnLocalPdf: '⬇ Full-Text PDF',
+        btnOpenGuide: '▶ Interactive Guide',
+        btnZenodo: 'Zenodo DOI ↗',
+        btnCopyBib: 'Copy BibTeX',
+        lblToggleBib: 'Show / Hide BibTeX',
+        archPolicyHeader: 'Canonical DOI & Open-Archive Indexing Architecture',
+        archCard1Title: '1. Canonical Zenodo DOIs',
+        archCard1Body: 'Every manuscript carries a single permanent DataCite DOI on Zenodo so citations across preprints, repositories, and software remain unified.',
+        archCard2Title: '2. HAL & Local PDF Mirrors',
+        archCard2Body: 'Full-text PDFs are mirrored on HAL (reusing the canonical Zenodo DOI) and hosted locally under /pdfs/ with dedicated Highwire Press metadata pages.',
+        archCard3Title: '3. Interactive & Formal Verification',
+        archCard3Body: 'Each theoretical work pairs directly with a scoped interactive laboratory, live OEIS sequence calculators, or machine-checked Lean 4 proofs.'
+      },
+      FR: {
+        bcRoot: 'Nouveaux Concepts Mathématiques',
+        pubsBreadcrumb: 'Pilier 4 : Prépublications & Articles',
+        btnBackOeis: '← Atlas OEIS (5)',
+        btnGotoFormal: 'Lean 4 & Code →',
+        sidebarFilterHeading: 'FILTRES BIBLIOGRAPHIQUES',
+        fltAllPubs: 'Tous les Travaux (2)',
+        fltFoundation: '★ Monographie Fondatrice',
+        fltZetaBranch: 'Théorie Analytique & ζ(s)',
+        fltGeoBranch: 'Feuilletages Discrets & Algèbre 2D',
+        fltLean4: '✓ Formalisé sous Lean 4',
+        scholarRecordsHeader: 'Fiches d’Archive Dédiées',
+        scholarRecordsHint: 'Pages individuelles formatées avec les balises Highwire Press pour l’indexation Google Scholar et institutionnelle :',
+        pubMainHeader: 'Bibliographie Générale — Prépublications & Monographies',
+        btnCopyAllBib: 'Copier Tout le BibTeX',
+        typePreprint: 'Prépublication de Recherche',
+        typeMonograph: 'Monographie Fondatrice',
+        btnRecordPage: '📄 Fiche Bibliographique',
+        btnLocalPdf: '⬇ Article PDF Complet',
+        btnOpenGuide: '▶ Guide Interactif',
+        btnZenodo: 'DOI Zenodo ↗',
+        btnCopyBib: 'Copier BibTeX',
+        lblToggleBib: 'Afficher / Masquer BibTeX',
+        archPolicyHeader: 'Architecture d’Archivage Ouvert & Unicité des DOI',
+        archCard1Title: '1. DOI Canoniques Zenodo',
+        archCard1Body: 'Chaque manuscrit possède un DOI DataCite permanent unique sur Zenodo afin d’unifier le graphe de citations.',
+        archCard2Title: '2. Miroirs HAL & PDF Locaux',
+        archCard2Body: 'Les PDF intégraux sont déposés sur HAL (avec le même DOI Zenodo) et hébergés sous /pdfs/ avec des pages métadonnées dédiées.',
+        archCard3Title: '3. Vérification Interactive & Formelle',
+        archCard3Body: 'Chaque article est couplé à un laboratoire interactif dédié, des calculateurs OEIS en direct ou des preuves vérifiées sous Lean 4.'
+      },
+      AR: {
+        bcRoot: 'مفاهيم رياضية جديدة',
+        pubsBreadcrumb: 'الركيزة 4: المنشورات والمقالات البحثية',
+        btnBackOeis: '→ أطلس OEIS (5)',
+        btnGotoFormal: 'براهين Lean 4 والكود ←',
+        sidebarFilterHeading: 'تصفية المنشورات العلمية',
+        fltAllPubs: 'جميع الأعمال (2)',
+        fltFoundation: '★ المقال التأسيسي (الأصل)',
+        fltZetaBranch: 'نظرية الأعداد التحليلية و ζ(s)',
+        fltGeoBranch: 'التوريقات المتقطعة والجبر 2D',
+        fltLean4: '✓ مبرهن آلياً بـ Lean 4',
+        scholarRecordsHeader: 'صفحات التوثيق المستقلة',
+        scholarRecordsHint: 'صفحات أرشيفية مخصصة لكل مقال بوسوم Highwire Press للفهرسة الأكاديمية في Google Scholar:',
+        pubMainHeader: 'القائمة المرجعية للمنشورات — المقالات والأبحاث التأسيسية',
+        btnCopyAllBib: 'نسخ جميع توثيقات BibTeX',
+        typePreprint: 'مقال بحثي (Preprint)',
+        typeMonograph: 'دراسة تأسيسية (Monograph)',
+        btnRecordPage: '📄 صفحة التوثيق الأكاديمي',
+        btnLocalPdf: '⬇ النص الكامل PDF',
+        btnOpenGuide: '▶ الدليل التفاعلي',
+        btnZenodo: 'معرف Zenodo DOI ↗',
+        btnCopyBib: 'نسخ BibTeX',
+        lblToggleBib: 'إظهار / إخفاء BibTeX',
+        archPolicyHeader: 'هندسة الأرشفة المفتوحة وتوحيد معرفات DOI',
+        archCard1Title: '1. معرفات DOI الموحدة عبر Zenodo',
+        archCard1Body: 'يحمل كل مقال معرف DOI وحيداً ودائماً عبر منصة Zenodo لضمان توحيد الاستشهادات المرجعية عبر جميع المنصات.',
+        archCard2Title: '2. أرشيف HAL ونسخ PDF المحلية',
+        archCard2Body: 'تُودع ملفات PDF الكاملة على أرشيف HAL (بنفس معرف DOI) وتُستضاف محلياً ضمن المسار /pdfs/ لخدمة الفهرسة المباشرة.',
+        archCard3Title: '3. المختبرات التفاعلية والتحقق الصوري',
+        archCard3Body: 'يقترن كل عمل نظري بدليل تفاعلي مخصص، وحاسبات متتاليات OEIS حية، أو براهين رسمية محققة آلياً بنظام Lean 4.'
+      }
+    };
+
+    window.PAGE_I18N = PUBS_I18N;
+    let currentFilter = 'ALL';
+
+    function setPubFilter(flt, closeMobile = false) {
+      currentFilter = flt;
+      ['ALL', 'foundation', 'zeta', 'foliations', 'lean4'].forEach(k => {
+        const btn = document.getElementById(`pub-flt-${k}`);
+        if (btn) {
+          if (k === flt) btn.classList.add('nav-page-active');
+          else btn.classList.remove('nav-page-active');
+        }
+      });
+      if (closeMobile && window.innerWidth < 1024) {
+        document.getElementById('guide-sidebar').classList.add('hidden');
+      }
+      renderPublicationsList();
+    }
+
+    function copySingleBib(idx, btnEl) {
+      const p = PORTAL_REGISTRY.PUBLICATIONS[idx];
+      if (p) PortalShell.copyText(p.bibtex, btnEl, '✓ BibTeX Copied!');
+    }
+
+    function copyAllBibtex(btnEl) {
+      const all = PORTAL_REGISTRY.PUBLICATIONS.map(p => p.bibtex).join('\n\n');
+      PortalShell.copyText(all, btnEl, '✓ Copied All!');
+    }
+
+    function renderPublicationsList() {
+      const lang = PortalShell.getLang();
+      const dict = PUBS_I18N[lang] || PUBS_I18N.EN;
+      const items = PORTAL_REGISTRY.PUBLICATIONS.filter(p => {
+        if (currentFilter === 'foundation') return p.hierarchyRole === 'foundation';
+        if (currentFilter === 'lean4') return !!p.lean4;
+        if (currentFilter === 'zeta' || currentFilter === 'foliations') return p.branch === currentFilter;
+        return true;
+      });
+
+      document.getElementById('pub-list-container').innerHTML = items.map((p) => {
+        const origIdx = PORTAL_REGISTRY.PUBLICATIONS.indexOf(p);
+        const typeLbl = p.type === 'monograph' ? dict.typeMonograph : dict.typePreprint;
+        const oeisPills = (p.oeis || []).map(id =>
+          `<a href="oeis.html#${id}" class="px-2 py-0.5 rounded bg-blue-50 hover:bg-blue-100 text-[#1E3A8A] border border-blue-200 mono-num text-[11px] font-bold">OEIS ${id}</a>`
+        ).join('');
+
+        const isFoundation = p.hierarchyRole === 'foundation';
+        const roleBadge = p.derivedFromAspect
+          ? `<span class="px-2.5 py-0.5 rounded ${isFoundation ? 'bg-[#1E3A8A] text-white font-extrabold' : 'bg-sky-50 text-[#0369A1] border border-sky-300 font-bold'} text-[11px]">${isFoundation ? '★ ' : '↳ '}${p.derivedFromAspect[lang]}</span>`
+          : '';
+
+        return `
+          <article class="p-4 sm:p-5 rounded-md ${isFoundation ? 'bg-blue-50/40 border-2 border-[#1E3A8A]' : 'bg-slate-50 border border-slate-300'} space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-[#1E3A8A] text-white mono-num font-extrabold">[${p.num}]</span>
+                <span class="px-2.5 py-0.5 rounded bg-white border border-slate-300 font-bold text-slate-800">${typeLbl}</span>
+                ${roleBadge}
+                <span class="text-slate-600 font-semibold">${p.dateDisplay[lang]}</span>
+                ${p.lean4 ? `<a href="formalization.html" class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 font-bold text-[11px]">✓ Lean 4</a>` : ''}
+                ${p.halStatus ? `<span class="px-2.5 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-300 font-semibold text-[11px]">${p.halStatus[lang]}</span>` : ''}
+              </div>
+              <span class="mono-num text-[11px] text-slate-500">MSC 2020: ${p.msc.join(', ')}</span>
+            </div>
+
+            <div>
+              <h2 class="serif-heading text-xl sm:text-2xl font-bold text-slate-900">
+                <a href="${p.paperPage}" class="hover:text-[#1E3A8A] hover:underline">${p.title[lang]}</a>
+              </h2>
+              <p class="text-xs sm:text-sm font-semibold text-[#0284C7] mt-0.5">${p.subtitle[lang]}</p>
+              <div class="text-xs text-slate-600 mt-1">
+                <strong>Hassan Baloui</strong> • <a href="${p.doiUrl}" target="_blank" rel="noopener" class="mono-num text-[#1E3A8A] underline">https://doi.org/${p.doi}</a>
+              </div>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">${p.abstract[lang]}</p>
+
+            <div class="flex flex-wrap items-center gap-1.5">${oeisPills}</div>
+
+            <div class="pt-2 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <a href="${p.paperPage}" class="px-3 py-1.5 rounded bg-[#1E3A8A] hover:bg-blue-900 text-white text-xs font-bold transition">${dict.btnRecordPage}</a>
+                <a href="${p.pdfPath}" target="_blank" rel="noopener" class="px-3 py-1.5 rounded bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold transition">${dict.btnLocalPdf}</a>
+                <a href="${p.guidePage}" class="px-3 py-1.5 rounded bg-sky-50 hover:bg-sky-100 border border-sky-300 text-[#0369A1] text-xs font-bold transition">${dict.btnOpenGuide}</a>
+                <a href="${p.doiUrl}" target="_blank" rel="noopener" class="px-3 py-1.5 rounded bg-white hover:bg-slate-100 border border-slate-300 text-[#1E3A8A] mono-num text-xs font-bold transition">${dict.btnZenodo}</a>
+              </div>
+              <button onclick="copySingleBib(${origIdx}, this)" class="px-3 py-1.5 rounded bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition">${dict.btnCopyBib}</button>
+            </div>
+
+            <details class="text-xs">
+              <summary class="cursor-pointer font-bold text-slate-600 hover:text-[#1E3A8A] select-none">${dict.lblToggleBib}</summary>
+              <pre class="mt-2 p-3 rounded bg-slate-900 text-slate-100 mono-num text-[11px] overflow-x-auto leading-relaxed">${p.bibtex}</pre>
+            </details>
+          </article>
+        `;
+      }).join('');
+    }
+
+    window.onPortalLanguageChange = function () {
+      renderPublicationsList();
+    };
+
+    window.addEventListener('DOMContentLoaded', () => {
+      PortalShell.init({
+        rootPrefix: '',
+        activePillar: 'publications',
+        guideId: null,
+        showCharLegend: false
+      });
+    });
+  </script>
+</body>
+</html>

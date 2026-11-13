@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OEIS Sequence Atlas &amp; Calculators — Dr. Hassan Baloui | New Mathematical Concepts</title>
+  <meta name="description" content="Interactive OEIS Sequence Atlas and real-time calculators by Dr. Hassan Baloui for A382286, A401528, A381054, A382306, and A383115 connecting quadratic shells, minimal balancing multipliers, and Apéry's constant ζ(3)." />
+  <meta name="author" content="Hassan Baloui" />
+  <link rel="canonical" href="https://www.new-mathematical-concepts.org/oeis.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/portal.css" />
+</head>
+<body class="min-h-screen flex flex-col">
+  <div id="portal-header"></div>
+  <div id="portal-topbar"></div>
+
+  <div class="w-full bg-white border-b border-slate-200">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <nav class="flex items-center gap-1.5 text-slate-600 font-medium truncate">
+        <a href="index.html" class="text-[#1E3A8A] hover:underline font-bold" data-i18n="bcRoot">New Mathematical Concepts</a>
+        <span>/</span>
+        <span class="font-semibold text-[#1E3A8A]" data-i18n="oeisPillarBadge">Pillar 3: OEIS Sequence Atlas &amp; Calculators</span>
+        <span>/</span>
+        <span id="oeis-breadcrumb-seq" class="font-bold text-slate-900 mono-num">A382286</span>
+      </nav>
+      <div class="flex items-center gap-2 shrink-0">
+        <a href="guides/zeta-hierarchy.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-sky-50 hover:bg-sky-100 text-[#0369A1] border border-sky-300 font-bold text-[11px] transition" data-i18n="btnGotoZetaGuide">← Guide II: Balancing Multiplier &amp; Zeta (ζ)</a>
+        <a href="publications.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 font-semibold text-[11px] transition" data-i18n="btnGotoPubs">Publications →</a>
+      </div>
+    </div>
+    <div id="oeis-mobile-pills" class="lg:hidden flex items-center gap-1.5 overflow-x-auto px-4 py-1.5 bg-slate-50 border-t border-slate-200 text-[11px] font-bold mono-num"></div>
+  </div>
+
+  <div class="max-w-[1320px] w-full mx-auto px-3 sm:px-6 py-5 flex-1">
+    <div class="flex flex-col lg:flex-row gap-6 items-start">
+      <aside id="guide-sidebar" class="hidden lg:block w-full lg:w-[275px] shrink-0 space-y-6">
+        <div>
+          <div class="flex items-center justify-between mb-2 px-1">
+            <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500" data-i18n="sidebarOeisHeading">INDEXED OEIS SEQUENCES</div>
+            <button onclick="PortalShell.toggleMobileSidebar()" class="lg:hidden text-xs font-bold text-[#E11D48] px-2 py-0.5 rounded bg-rose-50 border border-rose-200">✕</button>
+          </div>
+          <div id="oeis-sidebar-list" class="flex flex-col"></div>
+        </div>
+        <div id="portal-author-box" class="space-y-6"></div>
+      </aside>
+
+      <main class="flex-1 min-w-0 w-full space-y-6">
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <div class="flex items-center gap-2 min-w-0">
+              <span id="oeis-active-id" class="px-2 py-0.5 rounded bg-[#1E3A8A] text-white mono-num text-xs font-extrabold">A382286</span>
+              <span id="oeis-active-title" class="truncate">Minimal Balancing Multiplier β(n)</span>
+            </div>
+            <a id="oeis-external-link" href="https://oeis.org/A382286" target="_blank" rel="noopener noreferrer" class="shrink-0 px-2.5 py-1 rounded bg-white hover:bg-blue-50 text-[#1E3A8A] border border-slate-300 text-xs font-bold mono-num transition">oeis.org/A382286 ↗</a>
+          </div>
+          <div class="lib-box-body space-y-4">
+            <p id="oeis-active-desc" class="text-xs sm:text-sm text-slate-700 leading-relaxed"></p>
+            <div id="oeis-active-formula" class="p-3 rounded bg-slate-50 border border-slate-200 text-center math-latex text-sm overflow-x-auto"></div>
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-50 p-3 rounded border border-slate-200">
+              <div class="flex items-center gap-3 flex-1 min-w-[200px]">
+                <span class="text-xs font-bold text-slate-800 whitespace-nowrap"><span data-i18n="lblTermCount">Terms Computed:</span> <span id="oeis-count-val" class="mono-num text-[#1E3A8A]">45</span></span>
+                <input id="oeis-slider-count" type="range" min="15" max="75" value="45" oninput="onOeisCountSlider()" class="w-full accent-[#1E3A8A] cursor-pointer" />
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <button onclick="toggleOeisRatioMode()" id="btn-ratio-mode" class="px-3 py-1.5 rounded border border-emerald-600 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition" data-i18n="btnCompare2to1">⇄ Compare 2:1 Cumulative Ratio (A383115 / A382306)</button>
+                <button onclick="copyActiveOeisTerms(this)" class="px-3 py-1.5 rounded bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 text-xs font-bold transition" data-i18n="btnCopyTerms">Copy Terms</button>
+              </div>
+            </div>
+            <div class="tikz-canvas-frame relative w-full h-[290px] sm:h-[320px]"><canvas id="oeisPlotCanvas" class="w-full h-full block cursor-pointer"></canvas></div>
+            <div id="oeis-point-readout" class="text-xs text-center font-semibold text-slate-700 bg-slate-50 py-1.5 px-3 rounded border border-slate-200 mono-num"></div>
+            <div class="space-y-1.5">
+              <div class="text-[11px] font-extrabold uppercase tracking-wider text-slate-500" data-i18n="lblComputedData">Exact Computed Terms (Click any term to highlight on plot)</div>
+              <div id="oeis-terms-strip" class="p-3 rounded bg-slate-50 border border-slate-200 flex flex-wrap gap-1.5 max-h-[150px] overflow-y-auto"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="evalBoxTitle">Synchronized Cross-Sequence Evaluator (n &amp; Quadratic Shell S_k)</span>
+            <span class="text-xs font-mono text-slate-500">A382286 • A381054 • A401528 • A382306 • A383115</span>
+          </div>
+          <div class="lib-box-body space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-50 p-3 rounded border border-slate-200">
+              <div class="flex items-center gap-2.5">
+                <label for="oeis-eval-n" class="text-xs font-bold text-slate-800" data-i18n="lblEvalInput">Evaluate Integer n (2 – 2500):</label>
+                <input id="oeis-eval-n" type="number" min="2" max="2500" value="76" oninput="renderCrossEvaluator()" class="w-24 px-2.5 py-1 rounded border border-slate-300 mono-num text-sm font-bold text-[#1E3A8A] bg-white" />
+              </div>
+              <div class="flex flex-wrap items-center gap-1.5 text-xs mono-num font-bold">
+                <button onclick="setEvalN(17)" class="px-2.5 py-1 rounded bg-rose-50 border border-rose-300 text-[#BE123C]">n = 17</button>
+                <button onclick="setEvalN(22)" class="px-2.5 py-1 rounded bg-white border border-slate-300 text-slate-700">n = 22</button>
+                <button onclick="setEvalN(32)" class="px-2.5 py-1 rounded bg-amber-50 border border-amber-300 text-amber-900">n = 32</button>
+                <button onclick="setEvalN(76)" class="px-2.5 py-1 rounded bg-sky-50 border border-sky-300 text-[#0369A1]">n = 76</button>
+                <button onclick="setEvalN(166)" class="px-2.5 py-1 rounded bg-white border border-slate-300 text-slate-700">n = 166</button>
+              </div>
+            </div>
+            <div id="oeis-eval-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs"></div>
+          </div>
+        </div>
+
+        <div class="lib-box">
+          <div class="lib-box-header">
+            <span data-i18n="dirBoxTitle">Complete OEIS Sequence Registry &amp; Mathematical Definitions</span>
+            <div class="flex items-center gap-1 text-[11px]">
+              <button onclick="setOeisFilter('ALL')" id="oeis-flt-ALL" class="px-2 py-0.5 rounded bg-[#1E3A8A] text-white font-bold" data-i18n="fltAll">All (5)</button>
+              <button onclick="setOeisFilter('MULT')" id="oeis-flt-MULT" class="px-2 py-0.5 rounded bg-white border border-slate-300 text-slate-700 font-bold" data-i18n="fltMult">Multipliers</button>
+              <button onclick="setOeisFilter('SETS')" id="oeis-flt-SETS" class="px-2 py-0.5 rounded bg-white border border-slate-300 text-slate-700 font-bold" data-i18n="fltSets">Sets &amp; Shells</button>
+            </div>
+          </div>
+          <div id="oeis-directory-cards" class="lib-box-body grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div id="portal-footer"></div>
+  <script src="data/registry.js"></script>
+  <script src="assets/shell.js"></script>
+  <script src="assets/oeis-atlas.js"></script>
+</body>
+</html>
