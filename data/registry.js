@@ -382,7 +382,7 @@
       code: 'Lens I',
       accent: '#1E3A8A',
       href: 'guides/foliations.html#p1',
-      formulaTex: 'n = (k, r)_S = (g_\lambda, d_\lambda)_\lambda',
+      formulaTex: 'n = (k, r)_S = (g_\\lambda, d_\\lambda)_\\lambda',
       tag: {
         EN: 'Intrinsic Coordinate Frame',
         FR: 'Repère de Coordonnées Intrinsèque',
@@ -409,7 +409,7 @@
       code: 'Lens II',
       accent: '#059669',
       href: 'guides/foliations.html#p2',
-      formulaTex: 'a \oplus_2 b = \{\nabla_\lambda(a,b)\}, \quad \delta_m(x,y) = \max(\Delta k, |\Delta g|)',
+      formulaTex: 'a \\oplus_2 b = \\{\\nabla_\\lambda(a,b)\\}, \\quad \\delta_m(x,y) = \\max(\\Delta k, |\\Delta g|)',
       tag: {
         EN: 'Algebra, Prime Triads & Geodesics',
         FR: 'Algèbre, Triades Premières & Géodésiques',
@@ -436,7 +436,7 @@
       code: 'Lens III',
       accent: '#0284C7',
       href: 'guides/zeta-hierarchy.html#p1',
-      formulaTex: '\beta(p) = \lfloor\sqrt{p}\rfloor^2, \quad \sum_{n\le x}\beta(n) \sim \frac{\zeta(3)}{2}\frac{x^2}{\log x}',
+      formulaTex: '\\beta(p) = \\lfloor\\sqrt{p}\\rfloor^2, \\quad \\sum_{n\\le x}\\beta(n) \\sim \\frac{\\zeta(3)}{2}\\frac{x^2}{\\log x}',
       tag: {
         EN: 'Divisor Dynamics, OEIS Sets & Zeta',
         FR: 'Dynamique des Diviseurs, Ensembles OEIS & Zeta',
